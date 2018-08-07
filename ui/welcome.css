@@ -26,7 +26,7 @@ img.solimage{
     width: 4.2em;
     height: 3.5em;
     cursor: pointer;
-    margin: 1em 1em 0 2em;
+    margin: 1em 0 0 2em;
 }
 
 /*-----------Menu--------------*/
@@ -35,8 +35,12 @@ body.clearfix > header {
     width: 100%;
 }
 ul.menu {
-    margin: 1em 10em 0 30em;
+    margin: 0 0.5em;
     float: right;
+}
+.control {
+    width: 35em;
+    display: block;
 }
 .menu li {
     list-style: none;
