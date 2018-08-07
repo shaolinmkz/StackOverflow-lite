@@ -22,7 +22,7 @@
             </a>
 
             <section>
-                <h1 class="heading">Welcome to StackOverflow-lite</h1>
+                <h1 class="heading">Welcome to <span class="bluefont" style="text-shadow: 0.02em 0.02em 0.05em whitesmoke;">Stack</span>Overflow-lite</h1>
                 <p class="intro">A forum where all your question can be answered.</p>
                 <p class="intro">If you are a new member, please click the register button below to begin registration.</p>
                 <a href="./signup.html" class="button" title="Click to SignUp to StackOverflow-lite">REGISTER</a>
@@ -30,12 +30,16 @@
         </section>
 
         <section class="signin">
+            <div name="wrapper">
             <h3>Or login to your account</h3>
-            <form>
-                <input type="email" class="input" id="siEmail" placeholder="Your email" />
-                <input type="password" class="input" id="siPword" placeholder="Password" />
-                <input type="button" class="input" id="login" value="LOGIN" />
-            </form>
+                <form>
+                    <input type="email" id="siEmail" placeholder="Your email" />
+                    <input type="password" id="siPword" placeholder="Password" />
+                    <a href="profile.html" style="text-decoration: none;">
+                        <input type="button" class="button" id="login" value="LOGIN" /> 
+                    </a>
+                </form>
+            </div>
         </section>
     </div>
     <script type="text/javascript" src="welcome.js"></script>
