@@ -1,0 +1,119 @@
+/* Resets Margin and Padding */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.wrapper{
+    width: 1450px;
+    margin: 0 auto;
+}
+
+/*-------------First Section---------------*/
+section.reg{
+    width: 700px;
+    height:780px;
+    background-color: #212123;
+    float: left;
+    padding: 0.5em;
+    color: white;
+}
+
+img.solimage{
+    display: block;
+    width: 4em;
+    height: 3.5em;
+    cursor: pointer;
+    text-decoration: none;
+}
+header.sitename{
+    position: absolute;
+    font-family: Cambria;
+    font-size: 1.5em;
+    font-weight: bolder;
+    border-bottom: 0.05em solid #256188;  
+    top: 1.5em; 
+    left: 5em;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+span.bluefont{
+    color: #256188;
+    border-bottom: .05em solid white;
+}
+section.reg > section{
+    text-align: justify;
+    width: 30em;
+    height: 25em;
+    padding: 1em;
+    margin: 10em auto;
+    background-color: rgba(245, 245, 245, 0.2);
+    border-radius: .5em;
+}
+
+h1.heading{
+    display: inline-block;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+p.intro{
+    font-size: 1.2em;
+}
+a.button{
+    display: block;
+    width: 5em;
+    margin: 2em auto 0 auto;
+    padding: 0.5em;
+    border-radius: 0.35em;
+    border: 0.02em solid rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    background-color: #32a4f5;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+}
+a.button:hover{
+    background-color: #79c7fa;
+}
+a.button:active{
+    background-color: #256188;
+    color: #fff;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*---------------Second section--------------*/
+section.signin{
+    width: 700px;
+    height: 780px;
+    background-color: #256188;
+    float: left;
+    padding: 0.5em;
+}
+
+section.signin > h3{
+    color: white;
+    width: 11em;
+    padding: 0.5em 0.5em 0 0;
+    border-bottom: 0.02em solid white;
+}
+forms > input[type = "email"] {
+    display: block;
+}
+
+/*-----------Fix for floating elements-----------*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
