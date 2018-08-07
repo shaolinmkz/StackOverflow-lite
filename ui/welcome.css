@@ -1,4 +1,4 @@
-/* Resets Margin and Padding */
+/*------Resets Margin and Padding------*/
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ img.solimage{
 }
 
 /*-----------Menu--------------*/
-body.clearfix > header{
+body.clearfix > header {
     background-color: #2c2c30;
     width: 100%;
 }
@@ -38,7 +38,7 @@ ul.menu {
     margin: 1em 10em 0 30em;
     float: right;
 }
-.menu li{
+.menu li {
     list-style: none;
     display: block;
     float: left;
@@ -100,7 +100,7 @@ span.bluefont{
 span.shadow{
     text-shadow: 0.05em 0.05em 0.05em whitesmoke;
 }
-section.reg > section{
+section.reg > aside{
     text-align: justify;
     width: 30em;
     height: 25em;
