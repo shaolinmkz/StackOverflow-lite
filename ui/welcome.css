@@ -72,6 +72,10 @@ section.reg{
     width: 700px;
     height:780px;
     background-color: #212123;
+    background-image: url("./images/StackOverflowLite.png");
+    background-position-x: -16em;
+    background-repeat: no-repeat;
+    background-size: cover;
     float: left;
     padding: 0.5em;
     color: white;
@@ -93,8 +97,8 @@ span.bluefont{
     color: #256188;
     border-bottom: .05em solid white;
 }
-span.blueborder{
-    border-bottom: .05em solid #256188;
+span.shadow{
+    text-shadow: 0.05em 0.05em 0.05em whitesmoke;
 }
 section.reg > section{
     text-align: justify;
@@ -102,7 +106,7 @@ section.reg > section{
     height: 25em;
     padding: 1.2em;
     margin: 10em auto;
-    background-color: rgba(245, 245, 245, 0.2);
+    background-color: rgba(65, 64, 64, 0.5);
     border-radius: .5em;
 }
 
@@ -114,7 +118,7 @@ h1.heading{
 }
 p.intro{
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1.3em;
 }
 a.button{
     display: block;
@@ -173,7 +177,7 @@ img.avatar{
     position: absolute;
     width: 8em;
     height: 8em;
-    top: 12.55em;
+    top: 12.538em;
     right: 24em;
     display: block;
 }
