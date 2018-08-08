@@ -152,19 +152,20 @@ a.button:active {
 
 /*---------------Second section--------------*/
 
-section.signin > div{
-    width: 25em;
-    border: 0.4em solid rgb(251, 251, 253);
-    border-radius: 1em;
-    margin: 11em auto;
-}
-
 section.signin{
     width: 700px;
     height: 780px;
     background-color: #256188;
     float: left;
     padding: 0.5em;
+}
+
+section.signin > div{
+    width: 25em;
+    border: 0.4em solid rgb(251, 251, 253);
+    border-radius: 1em;
+    margin: 11em auto;
+    position: relative; /*added*/
 }
 
 section.signin h3{
@@ -181,12 +182,11 @@ img.avatar{
     position: absolute;
     width: 8em;
     height: 8em;
-    top: 12.538em;
-    right: 24em;
-    display: block;
+    top: -65.4px;
+    left: calc(50% - 65.4px);
 }
 
-form input[type="email"], form input[type="password"] {
+form input[type ="email"], form input[type ="password"], form input[type = "text"] {
     display: block;
     width: 15em;
     outline: none;
