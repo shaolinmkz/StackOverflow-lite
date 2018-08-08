@@ -58,7 +58,6 @@ ul.menu {
 }
 
 .menu li > a{
-    width: 5em;
     padding: 0.5em 1em 0.5em 1em;
     background-color: #212123;
     text-align: center;
@@ -251,6 +250,14 @@ form input[type = "button"]:active{
     display: block;
     margin: 0 auto;
     margin-bottom: 2em;
+}
+
+/*-------------PROFILE----------*/
+section.profile-container{
+    margin: 0 auto;
+    width: 1200px;
+    height: 960px;
+    background-color: #ecf3ff;
 }
 
 /*-------------Footer---------------*/
