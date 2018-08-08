@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="pagestyles.css" />
 </head>
 
-<body class="clearfix">
+<body class="clearfix" id="header">
     <header class="clearfix">
         <a href="./welcome.html">
             <img src="images/StackOverflowLite.png" alt="SOLite_logo" class="solimage" />
@@ -45,18 +45,24 @@
                 <form method="POST" action="profile.html">
                     <input type="email" id="siEmail" placeholder="Email"/>
                     <input type="password" id="siPword" placeholder="Password" />
+
                     <center>
                         <aside id="disp-error" style="color: rgb(255, 45, 45);"></aside>
                     </center>
+                    
                     <input type="button" class="button" id="signin" title="click to login to your profile" value="LOGIN" />
+                    <center>
+                        <input type="checkbox" title="Creates cookies" id="remember"/> 
+                        <label class="forgot" for="remember" style="display: inline; cursor: pointer;">Remember me!</label>
+                    </center>
                     <a href="#">
-                        <span class="forgot">Forgot password?</span>
+                        <label class="forgot" style="margin-top: .5em; cursor: pointer;">Forgot password?</label>
                     </a>
                 </form>
             </div>
         </section>
     </div>
-    <footer class="foot">
+    <footer class="foot" id="footer">
         <center>
             <a href="#">
                 <img src="./images/instagram.png" alt="instagram-icon" class="social-media" />

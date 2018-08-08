@@ -189,7 +189,7 @@ section.signin > div{
     border: 0.4em solid rgb(251, 251, 253);
     border-radius: 1em;
     margin: 11em auto;
-    position: relative; /*added to set avatar*/
+    position: relative; /*added to set avatar when Absolute*/
     background-color: #ffffff62;
 }
 
@@ -294,4 +294,15 @@ img.social-media:hover{
 
 .clearfix:after {
     clear: both;
+}
+
+/*------------MEDIA QUERIES------------*/
+
+@media only screen and (max-width: 1599px) {
+    #header {
+        width: 1450px;
+    }
+    #footer {
+        width: 1450px;
+    }
 }
