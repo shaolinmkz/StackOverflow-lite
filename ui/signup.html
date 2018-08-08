@@ -23,7 +23,7 @@
     width: 15em;
     outline: none;
     margin: 1em auto;
-    background-color: #256188;
+    /* background-color: #256188; */
 }
 
 form input[type = "button"] {
@@ -47,22 +47,6 @@ form input[type = "button"] {
                 Overflow-lite
             </h2>
         </a>
-        <!-- <section class="control clearfix">
-            <ul class="menu">
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./aboutus.html">About Us</a>
-                </li>
-                <li>
-                    <a href="questionsandanswers.html">Q and A</a>
-                </li>
-                <li>
-                    <a href="./profile.html">Profile</a>
-                </li>
-            </ul>
-        </section> -->
     </header>
 
     <div class="wrapper clearfix">
@@ -75,7 +59,7 @@ form input[type = "button"] {
                 
                 <h2 class="intro">Already a member?</h2>
                 <p class="intro">Click the button below or fill the regisration form at the right hand side of your screen.</p>
-                <a href="./welcome.html" class="button" title="Click to SignUp to StackOverflow-lite">SIGNIN</a>
+                <a href="./welcome.html" class="button" title="Click to Sign into StackOverflow-lite">SIGNIN</a>
             </aside>
         </section>
 
@@ -85,22 +69,22 @@ form input[type = "button"] {
 
                 <img src="./images/avatar.png" alt="avatar" class="avatar" />
 
-                <h3>REGISTRATION</h3>
+                <h3>SIGNUP FORM</h3>
 
                 <form method="POST" action="#">
-                    <input type="text" id="fname" placeholder="First name" required/>
-                    <input type="text" id="lname" placeholder="Last name (REQUIRED)" />
+                    <input type="text" id="fname" placeholder="First name" />
+                    <input type="text" id="lname" placeholder="Last name " />
                     <input type="text" id="mname" placeholder="Middle name" />
-                    <input type="text" id="uname" placeholder="Username (REQUIRED)" />
-                    <input type="email" id="email" placeholder="Email (REQUIRED)" />
-                    <input type="password" id="pword" placeholder="Password (REQUIRED)" />
-                    <input type="password" id="repword" placeholder="Re-enter Password (REQUIRED)" />
-                    <aside id="display" style="visibility: hidden; color: rgb(255, 0, 0);"></aside>
+                    <input type="text" id="uname" placeholder="Username " />
+                    <input type="email" id="email" placeholder="Email" />
+                    <input type="password" id="pword" placeholder="Password" />
+                    <input type="password" id="repword" placeholder="Re-enter Password" />
+                    <center>
+                        <aside id="disp-error-message" style="color: rgb(255, 45, 45);"></aside>
+                    </center>
                     <input type="button" class="button" id="signup" title="click to create your profile" value="SIGNUP" />
-                    <a href="#">
-                        <span class="forgot">Forgot password?</span>
-                    </a>
-                </form>
+                    <br/>
+                </form> 
             </div>
         </section>
     </div>
@@ -120,7 +104,7 @@ form input[type = "button"] {
             </a>
         </center>
     </footer>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scriptSignUp.js"></script>
 </body>
 
 </html>

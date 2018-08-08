@@ -189,7 +189,8 @@ section.signin > div{
     border: 0.4em solid rgb(251, 251, 253);
     border-radius: 1em;
     margin: 11em auto;
-    position: relative; /*added*/
+    position: relative; /*added to set avatar*/
+    background-color: #ffffff62;
 }
 
 section.signin h3{
@@ -215,7 +216,7 @@ form input[type ="email"], form input[type ="password"], form input[type = "text
     width: 15em;
     outline: none;
     margin: 2em;
-    background-color: #256188;
+    background-color: rgba(255, 255, 255, 0);
     font-size: 1.25em;
     color: white;
     border: none;
@@ -224,8 +225,7 @@ form input[type ="email"], form input[type ="password"], form input[type = "text
 
 form input[type = "button"] {
     display: block;
-    margin: 0 auto;
-    margin-bottom: 0.5em;
+    margin: 0.5em auto 1em auto;
     width: 5em;
     padding: 0.25em;
     border-radius: 0.35em;
@@ -259,7 +259,7 @@ form input[type = "button"]:active{
     margin-bottom: 2em;
 }
 
-/*-------------PROFILE----------*/
+/*-------------INDEX-Profile----------*/
 section.profile-container{
     margin: 0 auto;
     width: 1200px;
