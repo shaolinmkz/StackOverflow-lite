@@ -82,16 +82,20 @@ form input[type = "button"] {
 
         <section class="signin">
             <div name="Inner-wrapper">
+
                 <img src="./images/avatar.png" alt="avatar" class="avatar" />
+
                 <h3>REGISTRATION</h3>
-                <form method="POST" action="profile.html">
-                    <input type="text" id="fname" placeholder="First name" />
-                    <input type="text" id="lname" placeholder="Last name" />
+
+                <form method="POST" action="#">
+                    <input type="text" id="fname" placeholder="First name" required/>
+                    <input type="text" id="lname" placeholder="Last name (REQUIRED)" />
                     <input type="text" id="mname" placeholder="Middle name" />
-                    <input type="text" id="uname" placeholder="Username" />
-                    <input type="email" id="email" placeholder="Email" />
-                    <input type="password" id="pword" placeholder="Password" />
-                    <input type="password" id="repword" placeholder="Re-enter Password" />
+                    <input type="text" id="uname" placeholder="Username (REQUIRED)" />
+                    <input type="email" id="email" placeholder="Email (REQUIRED)" />
+                    <input type="password" id="pword" placeholder="Password (REQUIRED)" />
+                    <input type="password" id="repword" placeholder="Re-enter Password (REQUIRED)" />
+                    <aside id="display" style="visibility: hidden; color: rgb(255, 0, 0);"></aside>
                     <input type="button" class="button" id="signup" title="click to create your profile" value="SIGNUP" />
                     <a href="#">
                         <span class="forgot">Forgot password?</span>
@@ -116,7 +120,7 @@ form input[type = "button"] {
             </a>
         </center>
     </footer>
-    <script type="text/javascript" src="welcome.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>

@@ -76,6 +76,13 @@ ul.menu {
     border-bottom: 0.1em solid rgb(26, 25, 25);
 }
 
+header.clearfix input[type = "search"] {
+    width: 18em;
+    padding: .5em;
+    background-color: #ffffff;
+    color: rgb(56, 54, 54);
+    font-size: 1.1em;
+}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
