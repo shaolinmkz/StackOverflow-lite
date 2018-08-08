@@ -259,6 +259,41 @@ form input[type = "button"]:active{
     margin-bottom: 2em;
 }
 
+.red {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 20px 0 0 0; 
+}
+.yellow{
+    background-color: yellow;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 20px 0 0 0; 
+}
+.greenYellow{
+    background-color: rgb(148, 216, 47);
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 20px 0 0 0; 
+}
+.green{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 20px 0 0 0; 
+}
+label{
+    font-family: Helvetica;
+    font-size: 0.7em;
+    margin: 20px 5px 0 5px;
+    font-weight: bold;
+}
+
 /*-------------INDEX-Profile----------*/
 section.profile-container{
     margin: 0 auto;
