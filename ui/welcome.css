@@ -1,9 +1,12 @@
 /*------Resets Margin and Padding------*/
+
 *{
     margin: 0;
     padding: 0;
 }
+
 /*-------General Settings-----*/
+
 body{
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -21,6 +24,7 @@ a{
 }
 
 /*--------Top left logo-----------*/
+
 img.solimage{
     display: inline-block;
     width: 4.2em;
@@ -30,23 +34,29 @@ img.solimage{
 }
 
 /*-----------Menu--------------*/
+
 body.clearfix > header {
     background-color: #2c2c30;
+    background-image: url("./images/banner.png");
     width: 100%;
 }
+
 ul.menu {
     margin: 0 0.5em;
     float: right;
 }
+
 .control {
     width: 35em;
     display: block;
 }
+
 .menu li {
     list-style: none;
     display: block;
     float: left;
 }
+
 .menu li > a{
     width: 5em;
     padding: 0.5em 1em 0.5em 1em;
@@ -72,6 +82,7 @@ ul.menu {
 
 
 /*-------------First Section---------------*/
+
 section.reg{
     width: 700px;
     height:780px;
@@ -97,13 +108,16 @@ h2.sitename{
     text-decoration: none;
     color: white;
 }
+
 span.bluefont{
     color: #256188;
     border-bottom: .05em solid white;
 }
+
 span.shadow{
-    text-shadow: 0.05em 0.05em 0.05em whitesmoke;
+    text-shadow: 0.05em 0.05em 0.05em rgb(15, 15, 15);
 }
+
 section.reg > aside{
     text-align: justify;
     width: 30em;
@@ -120,10 +134,12 @@ h1.heading{
     text-align: center;
     border-bottom: .05em solid #f7f8f8;
 }
+
 p.intro{
     font-size: 1.2em;
     line-height: 1.3em;
 }
+
 a.button{
     display: block;
     width: 5em;
@@ -139,10 +155,12 @@ a.button{
     cursor: pointer;
     text-align: center;
 }
+
 a.button:hover{
     background-color: #79c7fa;
     border-bottom: 0.05em solid white;
 }
+
 a.button:active {
     background-color: #256188;
     color: #fff;
@@ -155,7 +173,7 @@ a.button:active {
 section.signin{
     width: 700px;
     height: 780px;
-    background-color: #256188;
+    background-color: #256188; 
     float: left;
     padding: 0.5em;
 }
@@ -219,10 +237,12 @@ form input[type = "button"]:hover{
     background-color: #a0c3da;
     border-bottom: 0.05em solid rgb(0, 0, 0);
 }
+
 form input[type = "button"]:active{
     background-color: #256188;
     color: #fff;
 }
+
 .forgot{
     color: white;
     font-size: 1em;
@@ -234,25 +254,30 @@ form input[type = "button"]:active{
 }
 
 /*-------------Footer---------------*/
+
 footer.foot{
     background-color: #2c2c30;
     width: 100%;
 }
+
 img.social-media{
     width: 2em;
     height: 2em;
     display: inline-block;
     margin: 1em 0.1em;
 }
+
 img.social-media:hover{
     background-color: #256188;
 }
 
 /*-----------Fix for floating elements-----------*/
+
 .clearfix:before, .clearfix:after {
     content: "";
     display: table;
 }
+
 .clearfix:after {
     clear: both;
 }
