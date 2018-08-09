@@ -8,13 +8,15 @@
 /*-------General Settings-----*/
 
 body{
-    width: 100%;
+    max-width: 100%;
+    min-width: 480px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #212123;
+    background-image: url("./images/banner.png");
 }
 
 div.wrapper{
-    width: 1450px;
+    width: 90.625em;
     margin: 0 auto;
 }
 
@@ -36,9 +38,11 @@ img.solimage{
 /*-----------Menu--------------*/
 
 body.clearfix > header {
-    background-color: #2c2c30;
     background-image: url("./images/banner.png");
-    width: 100%;
+    background-size: contain;
+    margin: 0 auto;
+    width: 90em;
+    position: relative;
 }
 
 ul.menu {
@@ -68,6 +72,14 @@ ul.menu {
     color: #256188;
     margin: 0;
     display: inline-block;
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .5s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .5s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .5s;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 .menu li > a:hover{
@@ -76,12 +88,21 @@ ul.menu {
     border-bottom: 0.1em solid rgb(26, 25, 25);
 }
 
+.menu li > a:focus-within {
+    background-color: #343536;
+    color: rgb(255, 0, 0);
+    border-bottom: 0.1em solid rgb(255, 0, 0);
+}
+
 header.clearfix input[type = "search"] {
-    width: 18em;
-    padding: .5em;
-    background-color: #ffffff;
+    width: 13em;
+    padding: 0.2em;
+    background-color: #e6e6e6;
     color: rgb(56, 54, 54);
-    font-size: 1.1em;
+    font-size: 1.2em;
+    border-radius: 1em;
+    margin: 0 0 0 5em; 
+    display: inline-block;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -90,8 +111,8 @@ header.clearfix input[type = "search"] {
 /*-------------First Section---------------*/
 
 section.reg{
-    width: 700px;
-    height:780px;
+    width: 43.75em;
+    height: 48.75em;
     background-color: #212123;
     background-image: url("./images/StackOverflowLite.png");
     background-position-x: -16em;
@@ -109,7 +130,7 @@ h2.sitename{
     font-weight: bolder;
     border-bottom: 0.05em solid #256188;  
     top: 1.7em; 
-    left: 3.6em;
+    left: 3.8em;
     cursor: pointer;
     text-decoration: none;
     color: white;
@@ -177,11 +198,13 @@ a.button:active {
 /*---------------Second section--------------*/
 
 section.signin{
-    width: 700px;
-    height: 780px;
-    background-color: #256188; 
+    width: 43.75em;
+    height: 48.75em;
+    background-color: #484f57; 
     float: left;
     padding: 0.5em;
+    background-image: url("./images/any-question.png");
+    background-size: cover;
 }
 
 section.signin > div{
@@ -207,8 +230,8 @@ img.avatar{
     position: absolute;
     width: 8em;
     height: 8em;
-    top: -65.4px;
-    left: calc(50% - 65.4px);
+    top: -4.0875em;
+    left: calc(50% - 4.0875em);
 }
 
 form input[type ="email"], form input[type ="password"], form input[type = "text"] {
@@ -240,19 +263,19 @@ form input[type = "button"] {
 }
 
 form input[type = "button"]:hover{
-    background-color: #a0c3da;
+    background-color: #93c8eb;
+    color: #fff;
     border-bottom: 0.05em solid rgb(0, 0, 0);
 }
 
 form input[type = "button"]:active{
     background-color: #256188;
-    color: #fff;
 }
 
 .forgot{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1em;
-    width: 8em;
+    width: 9em;
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -261,52 +284,53 @@ form input[type = "button"]:active{
 
 .red {
     background-color: red;
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     display: inline-block;
-    margin: 20px 0 0 0; 
+    margin: 1.25em 0 0 0; 
 }
 .yellow{
     background-color: yellow;
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     display: inline-block;
-    margin: 20px 0 0 0; 
+    margin: 1.25em 0 0 0; 
 }
 .greenYellow{
     background-color: rgb(148, 216, 47);
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     display: inline-block;
-    margin: 20px 0 0 0; 
+    margin: 1.25em 0 0 0; 
 }
 .green{
     background-color: green;
-    width: 10px;
-    height: 10px;
+    width: 0.625em;
+    height: 0.625em;
     display: inline-block;
-    margin: 20px 0 0 0; 
+    margin: 1.25em 0 0 0; 
 }
 label{
     font-family: Helvetica;
     font-size: 0.7em;
-    margin: 20px 5px 0 5px;
+    margin: 1.25em 0.3125em 0 0.3125em;
     font-weight: bold;
 }
 
-/*-------------INDEX-Profile----------*/
-section.profile-container{
+/*-------------INDEX-home----------*/
+section.container{
     margin: 0 auto;
-    width: 1200px;
-    height: 960px;
+    width: 75em;
+    height: 60em;
     background-color: #ecf3ff;
 }
 
 /*-------------Footer---------------*/
 
 footer.foot{
-    background-color: #2c2c30;
-    width: 100%;
+    /* background-color: #2c2c30; */
+    margin: 0 auto;
+    width: 90em;
 }
 
 img.social-media{
@@ -335,9 +359,21 @@ img.social-media:hover{
 
 @media only screen and (max-width: 1599px) {
     #header {
-        width: 1450px;
+        width: 90.625em;
     }
     #footer {
-        width: 1450px;
+        width: 90.625em;
     }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 340px) {
+    section.signin{
+        width: 40em;
+    }
+    section.reg{
+        width: 40em;
+    }
+    /* body{
+        width: 95%;
+    } */
 }

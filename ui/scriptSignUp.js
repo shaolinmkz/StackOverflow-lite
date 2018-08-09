@@ -10,6 +10,8 @@ const signup = document.getElementById("signup");
 
 //----SignUp form input validation-----
 const signupValidation = () => {
+    disp.style.color = "rgb(255, 45, 45)";
+    
     if (fname.value === ""){
         disp.innerHTML = "Please enter a firstname";
         return false;
