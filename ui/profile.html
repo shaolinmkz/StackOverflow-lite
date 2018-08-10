@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="pagestyles.css" />
+    <style>
+        .control {
+            width: 50em;
+            display: inline-block;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body class="clearfix">
+    <header class="clearfix" id="header">
+        <a href="./welcome.html">
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" class="solimage" />
+        </a>
+        <a href="./welcome.html">
+            <h2 class="sitename">
+                <span class="bluefont">Stack</span>
+                Overflow-lite
+            </h2>
+        </a>
+        <nav class="control clearfix">
+            <ul class="menu">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+                <li>
+                    <a href="./profile.html">Profile</a>
+                </li>
+                <input type="search" placeholder="Search StackOverflow-lite" id="search" />
+            </ul>
+        </nav>
+        <img src="images/search.png" alt="search icon" title="search icon" class="search-icon" />
+        <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
+        <div title="ask question" class="ask-question"> POST A QUESTION
+
+            <article class="my-top-post">
+                <textarea placeholder="Ask a question..." class="text-area"></textarea>
+                <input type="button" value="POST" class="post-top-question" />
+            </article>
+        </div>
+    </header>
+
+    <section class="home-page-container clearfix">
+        <center>
+            <aside class="recent-questions">
+                <h3>Question feeds</h3>
+                <h4>Recently asked questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">What is the full of the acronym SQL?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I fix a windows BSOD?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is Javascript an object oriented language like C++?</a>
+                    </li>
+                    <li>
+                        <a href="#">My express dependency isn't installing, How can I fix it?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is it the meaning of mongoose?</a>
+                    </li>
+                    <li>
+                        <a href="#">Can Javascript be used outside the web browser?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">What are Andelans values?</a>
+                    </li>
+                    <li>
+                        <a href="#">Where can I download AngularJS for free?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I create a chatbox like facebook's own?</a>
+                    </li>
+                    <li>
+                        <a href="#">My files on my pen drivenkeep coverting to shortcuts?</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="home-feeds" id="home-feeds">
+                <article class="my-post">
+                    <img src="images/avatar.png" id="user" alt="profile-avatar" title="main-users-avatar" class="other-users-avatar" />
+                    <label for="user">
+                        <a href="#" class="user">Chidinmma Victoria</a>
+                    </label>
+                    <textarea placeholder="Ask a question..." class="text-area"></textarea>
+                    <input type="button" value="POST" class="post-question" />
+                </article>
+
+                <article class="my-post">
+                    <img src="images/avatar.png" id="musa" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="musa">
+                        <a href="#">Musa Adamu</a>
+                    </label>
+                    <p> Computer science inverts the normal. In normal science, you're given a world, and your job is to find
+                        out the rules. In computer science, you give the computer the rules, and it creates the world
+                        <a class="reference-link" href="https://www.brainyquote.com/quotes/alan_kay_875443?src=t_computer_science" target="_blank">(Read more)</a>
+                    </p>
+                </article>
+
+                <article class="my-post">
+                    <img src="images/avatar.png" id="lanre" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="lanre">
+                        <a href="#">Olanrewaju Adeboye</a>
+                    </label>
+                    <p>
+                        I think the combination of graduate education in a field like Computer Science and the opportunity to apply this in a work
+                        environment like Microsoft is what drove me. The impact these opportunities create can lead to work
+                        that has broad, worldwide impact.
+                        <a class="reference-link" href=" https://www.brainyquote.com/quotes/satya_nadella_597175?src=t_computer_science" target="_blank">(Read more)</a>
+
+                    </p>
+                </article>
+
+                <article class="my-post">
+                    <img src="images/avatar.png" id="juliet" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="juliet">
+                        <a href="#">Juliet Kess-Mormoh</a>
+                    </label>
+                    <p> I have a react application with a search form that on submit gets data from the api. I am able to search
+                        the database and get the results back to the api caller in handleSubmit which is triggered by...
+                    </p>
+                </article>
+
+            </section>
+
+            <footer class="foot" id="footer">
+                <center>
+                    <a href="#">
+                        <img src="./images/instagram.png" alt="instagram-icon" class="social-media" />
+                    </a>
+                    <a href="#">
+                        <img src="./images/facebook.png" alt="facebook-icon" class="social-media" />
+                    </a>
+                    <a href="#">
+                        <img src="./images/twitter.png" alt="twitter-icon" class="social-media" />
+                    </a>
+                    <a href="#">
+                        <img src="./images/email.png" alt="email-icon" class="social-media" />
+                    </a>
+                </center>
+            </footer>
+            <!-- <script type="text/javascript" src="script.js"></script> -->
+</body>
+
+</html>

@@ -89,10 +89,9 @@ ul.menu {
     /* border-bottom: 0.1em solid rgb(26, 25, 25); */
 }
 
-.menu li > a:focus-within {
-    background-color: #343536;
-    color: rgb(255, 0, 0);
-    /* border-bottom: 0.1em solid rgb(255, 0, 0); */
+.menu li > a:active {
+    background-color: #c8c9ca;
+    color: rgb(36, 36, 36);
 }
 
 header.clearfix input[type = "search"] {
@@ -173,6 +172,7 @@ article.my-top-post textarea{
     margin: 0 auto;
 }
 
+
 input.post-top-question{
     padding: 0.2em 0.5em 0.2em 0.5em;
     background-color: #2c6ecf;
@@ -204,6 +204,19 @@ header.clearfix div.ask-question:hover article.my-top-post {
     max-height: 90em;
     overflow: initial;
 } 
+
+article.my-top-post .text-area {
+    border-radius: 0.5em;
+    border: none;
+    height: 3em;
+    padding: 1em;
+    resize: none;
+    line-height: 1.3em;
+    font-family: cursive;
+    font-size: 1em;
+    outline: none;
+    margin: 0 auto;
+}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -421,16 +434,18 @@ label{
     font-weight: bold;
 }
 
-/*---------------------INDEX-home------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------INDEX-Home-Page-----------------*/
 
 section.home-page-container{
     width: 100%;
     margin: 2em auto 0 auto;
 }
 
-aside.recent-questions {
+aside.recent-questions { /* wrapper for recently asked questions*/
     width: 15%;
-    height: 60em;
+    height: 59.5em;
     float: left;
     background-color: #ffffff7a;
     margin-left: 5%;
@@ -471,6 +486,7 @@ section.home-feeds{ /*Home feeds section*/
     padding: 1em 2em 2em 2em; 
     float: left;
     background-color: #99bff87a;
+    height: 57em;
     overflow: auto;
 }
 
@@ -484,13 +500,14 @@ article.my-post { /*Post article main wrapper*/
     background-color: rgba(255, 255, 255, 0.753);
 }
 
-.my-post > label > a.user:first-child{
+.my-post > label > a.user{
     border: none;
     margin-bottom: 0;
 }
 
-.text-area {
+.my-post .text-area {
     border-radius: 0.5em;
+    border: none;
     width: 30em;
     height: 3em;
     padding: 1em;
@@ -499,9 +516,11 @@ article.my-post { /*Post article main wrapper*/
     font-family: cursive;
     font-size: 1em;
     outline: none;
+    display: block;
+    margin: 0 auto;
 }
 
-input.post-question { /*POST question button*/
+input.post-question, input.delete-question { /*POST & DELETE Question Button rule*/
     padding: 0.2em 0.5em 0.2em 0.5em;
     background-color: #2c6ecf;
     color: rgb(255, 255, 255);
@@ -517,11 +536,11 @@ input.post-question { /*POST question button*/
     right: calc(22% - 4em); 
 }
 
-input.post-question:hover{
+input.post-question:hover, input.delete-question:hover{
     background-color: #376cfd;
 }
 
-input.post-question:active{
+input.post-question:active, input.delete-question:active{
     background-color: #e6e6e6;
     color: #2675b6;
 }
@@ -553,9 +572,10 @@ article.my-post label a:hover{
 
 aside.recent-answers{
     width: 15%;
-    height: 60em;
+    height: 59.5em;
     border-radius: 0 0.5em 0.5em 0;
     float: left;
+    padding-top: 0.5em;
     margin-right: 5%;
     background-color: #ffffff7a;
     text-align: left;
@@ -580,6 +600,7 @@ footer.foot{
     /* background-color: #2c2c30; */
     margin: 0 auto;
     width: 90em;
+    display: block;
 }
 
 img.social-media{
