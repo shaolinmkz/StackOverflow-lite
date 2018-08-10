@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 /*-------General Settings-----*/
@@ -85,24 +86,67 @@ ul.menu {
 .menu li > a:hover{
     background-color: #343536;
     color: white;
-    border-bottom: 0.1em solid rgb(26, 25, 25);
+    /* border-bottom: 0.1em solid rgb(26, 25, 25); */
 }
 
 .menu li > a:focus-within {
     background-color: #343536;
     color: rgb(255, 0, 0);
-    border-bottom: 0.1em solid rgb(255, 0, 0);
+    /* border-bottom: 0.1em solid rgb(255, 0, 0); */
 }
 
 header.clearfix input[type = "search"] {
-    width: 13em;
+    width: 15em;
     padding: 0.2em;
+    padding-left: 1.5em; 
     background-color: #e6e6e6;
     color: rgb(56, 54, 54);
     font-size: 1.2em;
     border-radius: 1em;
-    margin: 0 0 0 5em; 
+    margin: 0 1em 0 5em; 
     display: inline-block;
+    outline: none;
+}
+
+img.profile-avatar{
+    width:  3em;
+    height: 3em;
+    cursor: pointer;
+    margin-left: 8em;
+}
+
+img.search-icon{
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    top: 2.4em;
+    right: calc(50% - 2.5em);
+    cursor: pointer;
+}
+
+input.ask-question{  /*POST BUTTON*/
+    position: absolute;
+    padding: 0.5em;
+    background-color: #2c6ecf;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 1em;
+    margin: -0 0 0 0; 
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    line-height: 1em;
+    top: 1.8em;
+    right: calc(5% - 1.8em);
+}
+
+input.ask-question:hover{
+    background-color: #376cfd;
+}
+input.ask-question:active{
+    background-color: #e6e6e6;
+    color: #2675b6;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -130,7 +174,7 @@ h2.sitename{
     font-weight: bolder;
     border-bottom: 0.05em solid #256188;  
     top: 1.7em; 
-    left: 3.8em;
+    left: calc(9% - 1.7em);
     cursor: pointer;
     text-decoration: none;
     color: white;
@@ -289,6 +333,7 @@ form input[type = "button"]:active{
     display: inline-block;
     margin: 1.25em 0 0 0; 
 }
+
 .yellow{
     background-color: yellow;
     width: 0.625em;
@@ -296,6 +341,7 @@ form input[type = "button"]:active{
     display: inline-block;
     margin: 1.25em 0 0 0; 
 }
+
 .greenYellow{
     background-color: rgb(148, 216, 47);
     width: 0.625em;
@@ -303,6 +349,7 @@ form input[type = "button"]:active{
     display: inline-block;
     margin: 1.25em 0 0 0; 
 }
+
 .green{
     background-color: green;
     width: 0.625em;
@@ -310,6 +357,7 @@ form input[type = "button"]:active{
     display: inline-block;
     margin: 1.25em 0 0 0; 
 }
+
 label{
     font-family: Helvetica;
     font-size: 0.7em;
@@ -317,12 +365,99 @@ label{
     font-weight: bold;
 }
 
-/*-------------INDEX-home----------*/
-section.container{
-    margin: 0 auto;
-    width: 75em;
+/*---------------------INDEX-home------------------*/
+
+section.home-page-container{
+    width: 100%;
+    margin: 2em auto 0 auto;
+}
+
+aside.recent-questions {
+    width: 15%;
     height: 60em;
-    background-color: #ecf3ff;
+    float: left;
+    background-color: #ffffff7a;
+    margin-left: 5%;
+    text-align: left;
+    padding-top: 0.5em;
+    border-radius: .5em 0 0 .5em;
+}
+
+aside.recent-questions > h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black
+
+}
+
+aside.recent-questions > h4{
+    text-align: center;
+    color: rgb(34, 33, 33);
+    font-family: cursive; 
+    padding: 0.3em;
+}
+
+.home-page-container a{
+    display: block;
+    color: blue;
+    margin: 1em;
+    padding-top: 0em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.01em solid #37373b;
+}
+
+.home-page-container a:hover{
+    color: #ffffff;
+}
+
+section.home-feeds{
+    width: 60%;
+    height: 60em;
+    float: left;
+    background-color: #99bff87a;
+}
+
+input.post-question {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    background-color: #2c6ecf;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    border-radius: 1em;
+    display: block;
+    outline: none;
+    cursor: pointer;
+}
+
+input.post-question:hover{
+    background-color: #376cfd;
+}
+
+input.post-question:active{
+    background-color: #e6e6e6;
+    color: #2675b6;
+}
+
+aside.recent-answers{
+    width: 15%;
+    height: 60em;
+    border-radius: 0 0.5em 0.5em 0;
+    float: left;
+    margin-right: 5%;
+    background-color: #ffffff7a;
+    text-align: left;
+}
+
+aside.recent-answers > h3 {
+    text-align: center;
+    color: white;
+    text-shadow: 0.1em 0.1em 0.1em black
+}
+
+aside.recent-answers > h4 {
+    text-align: center;
+    color: rgb(34, 33, 33);
+    font-family: cursive; 
+    padding: 0.3em;
 }
 
 /*-------------Footer---------------*/
@@ -373,7 +508,4 @@ img.social-media:hover{
     section.reg{
         width: 40em;
     }
-    /* body{
-        width: 95%;
-    } */
 }

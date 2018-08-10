@@ -12,7 +12,6 @@
             width: 50em;
             display: inline-block;
             margin-left: 10%;
-            /* border: 0.01em solid whitesmoke; */
         }
     </style>
 </head>
@@ -40,14 +39,111 @@
                     <a href="./profile.html">Profile</a>
                 </li>
                 <input type="search" placeholder="Search StackOverflow-lite" id="search" />
-            </ul> 
+            </ul>
         </nav>
-        
-        
+        <img src="images/search.png" alt="search icon" title="search icon" class="search-icon" />
+        <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
+        <input type="button" title="ask question" value="POST QUESTION" class="ask-question" />
     </header>
 
-    <section class="container">
+    <section class="home-page-container clearfix">
+        <center>
+            <aside class="recent-questions">
+                <h3>Question feeds</h3>
+                <h4>Recently asked questions</h4>
+                <li>
+                    <a href="#">What is SQL?</a>
+                </li>
+                <li>
+                    <a href="#">How can I break out of a nested for loop?</a>
+                </li>
+                <li>
+                    <a href="#">How can I fix a windows BSOD?</a>
+                </li>
+                <li>
+                    <a href="#">Is Javascript an object oriented language?</a>
+                </li>
+                <li>
+                    <a href="#">My express dependency isn't installing, How can I fix it?</a>
+                </li>
+                <li>
+                    <a href="#">Is it the meaning of mongoose?</a>
+                </li>
+                <li>
+                    <a href="#">What is SQL?</a>
+                </li>
+                <li>
+                    <a href="#">How can I break out of a nested for loop?</a>
+                </li>
+                <li>
+                    <a href="#">How can I fix a windows BSOD?</a>
+                </li>
+                <li>
+                    <a href="#">Is Javascript an object oriented language?</a>
+                </li>
+                <li>
+                    <a href="#">My express dependency isn't installing, How can I fix it?</a>
+                </li>
+                <li>
+                    <a href="#">My files on my pen drivenkeep coverting to shortcuts?</a>
+                </li>
+            </aside>
 
+            <section class="home-feeds">
+                <article class="my-post">
+                    <textarea placeholder="Ask a question"></textarea>
+                    <input type="button" value="POST" class="post-question" />
+                </article>
+
+                <article class="my-post">
+                    <p></p>
+                    <textarea></textarea>
+                </article>
+            </section>
+
+            <aside class="recent-answers">
+                <h3>Answer feeds</h3>
+                <h4>Recent answers to questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">SQL simply means... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can break out of a nested for loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows BSOD can be caused by different factors... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Javascript is not just a scri... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I had that same issue too with npm install express... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Mongoose has some connection with Mongo... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Server simply means... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can leave out of a while loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows Update can be caused BSOD... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Java is not Javascript... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Have you tried using "sudo" super user... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I used a software called SMADAV to solve that or use your CLI to... (more)</a>
+                    </li>
+                </ul>
+            </aside>
+        </center>
     </section>
 
     <footer class="foot" id="footer">
