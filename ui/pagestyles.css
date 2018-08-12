@@ -83,7 +83,7 @@ ul.menu {
     transition-duration: .5s;
 }
 
-.menu li > a:hover{
+.menu li > a:hover, .menu li a.current{
     background-color: #343536;
     color: white;
     /* border-bottom: 0.1em solid rgb(26, 25, 25); */
