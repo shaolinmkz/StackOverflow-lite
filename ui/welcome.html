@@ -12,10 +12,10 @@
 <body class="clearfix" id="header">
     <header class="clearfix">
         <a href="./welcome.html">
-            <img src="images/StackOverflowLite.png" alt="SOLite_logo" class="solimage" />
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" title="site-logo" class="solimage" />
         </a>
         <a href="./welcome.html">
-            <h2 class="sitename">
+            <h2 class="sitename" title="site-name">
                 <span class="bluefont">Stack</span>
                 Overflow-lite
             </h2>
@@ -34,7 +34,7 @@
                 <p class="intro">See answers from experts in the field. If you are a new member, please click the register button below to
                     begin registration.
                 </p>
-                <a href="./signup.html" class="button" title="Click to SignUp to StackOverflow-lite">REGISTER</a>
+                <a href="./signup.html" class="button" title="Click to SignUp to StackOverflow-lite">SIGN UP</a>
             </aside>
         </section>
 
@@ -43,21 +43,21 @@
             <div name="Inner-wrapper">
                 <img src="./images/avatar.png" alt="avatar" class="avatar" title="avatar"/>
                 <h3>Or login to your account</h3>
-                <form method="POST" action="#">
+                <form method="POST" action="#" onsubmit="return false">
                     <input type="email" id="siEmail" placeholder="Email" required/>
-                    <input type="password" id="siPword" placeholder="Password" />
+                    <input type="password" id="siPword" placeholder="Password" title="please enter your password"/>
 
                     <center>
                         <aside id="disp-error" style="color: rgb(255, 45, 45);"></aside>
                     </center>
                     
-                    <input type="button" class="button" id="signin" title="click to login to your profile" value="LOGIN" />
+                    <input type="submit" class="button" id="signin" title="click to login to your profile" value="LOGIN" />
                     <center>
-                        <input type="checkbox" id="remember"/> 
-                        <label class="forgot" title="Creates cookies" for="remember" style="display: inline; cursor: pointer;">Remember me!</label>
+                        <input type="checkbox" id="remember" title="create-cookie" style="cursor: pointer;"/> 
+                        <label class="forgot" title="creates-cookies" for="remember" style="display: inline; cursor: pointer;">Remember me!</label>
                     </center>
                     <a href="#">
-                        <label class="forgot" style="margin-top: .5em; cursor: pointer;">Forgot password?</label>
+                        <label class="forgot" style="margin-top: .5em; cursor: pointer;" title="password recovery">Forgot password?</label>
                     </a>
                 </form>
             </div>
@@ -66,16 +66,16 @@
     <footer class="foot" id="footer">
         <center>
             <a href="#">
-                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" />
+                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" title="instagram icon" />
             </a>
             <a href="#">
-                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" />
+                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" title="facebook icon" />
             </a>
             <a href="#">
-                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" />
+                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" title="twitter icon" />
             </a>
             <a href="#">
-                <img src="./images/email.png" alt="email-icon" class="social-media" />
+                <img src="./images/email.png" alt="email-icon" class="social-media" title="email icon" />
             </a>
         </center>
     </footer>

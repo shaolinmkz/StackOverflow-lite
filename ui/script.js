@@ -8,6 +8,8 @@ let postTopButton = document.getElementById("post-top-button");
 let deleteButton = document.getElementById("delete-button");
 
 /*--------------------------------------------------------------------------------------*/
+
+/*----Function that can post questions from the home page---*/
 const postUsersQuestion1 = () => {
 
     if(inputQuestion.value == "") {
@@ -47,7 +49,7 @@ const postUsersQuestion1 = () => {
 /*--------------------------------------------------------------------------------------*/
     let input = document.createElement("input");
     let type = document.createAttribute("type");
-    type.value = "button";
+    type.value = "submit";
     input.setAttributeNode(type);
 
     let val = document.createAttribute("value");
@@ -61,10 +63,63 @@ const postUsersQuestion1 = () => {
     let id = document.createAttribute("id");
     id.value = "delete-button";
     input.setAttributeNode(id);
+
+    let title = document.createAttribute("title");
+    title.value = "delete a post";
+    input.setAttributeNode(title);
+
+    // //------------------------------
+
+    let input2 = document.createElement("input");
+    let type2 = document.createAttribute("type");
+    type2.value = "submit";
+    input2.setAttributeNode(type2);
+
+    let val2 = document.createAttribute("value");
+    val2.value = "EDIT";
+    input2.setAttributeNode(val2);
+
+    let _class = document.createAttribute("class");
+    _class.value = "edit";
+    input2.setAttributeNode(_class);
+
+    let id2 = document.createAttribute("id");
+    id2.value = "edit-button";
+    input2.setAttributeNode(id2);
+
+    let title2 = document.createAttribute("title");
+    title2.value = "update a post";
+    input2.setAttributeNode(title2);
+
+    // //------------------------------
+
+    let input3 = document.createElement("input");
+    let type3 = document.createAttribute("type");
+    type3.value = "submit";
+    input3.setAttributeNode(type3);
+
+    let val3 = document.createAttribute("value");
+    val3.value = "COMMENT";
+    input3.setAttributeNode(val3);
+
+    let _class1 = document.createAttribute("class");
+    _class1.value = "comment";
+    input3.setAttributeNode(_class1);
+
+    let id3 = document.createAttribute("id");
+    id3.value = "comment-button";
+    input3.setAttributeNode(id3);
+
+    let title1 = document.createAttribute("title");
+    title1.value = "reply a post";
+    input3.setAttributeNode(title1);
+
 /*--------------------------------------------------------------------------------------*/
     let inputPost = `${inputQuestion.value}` || `${postTopQuestion.value}`;
     let text = document.createTextNode(inputPost);
     paragraph.appendChild(text);
+
+    paragraph.style.marginBottom = "1.5em";
 /*--------------------------------------------------------------------------------------*/
     label.appendChild(anchor); //Label appends the anchor
 /*--------------------------------------------------------------------------------------*/
@@ -73,7 +128,8 @@ const postUsersQuestion1 = () => {
     article.appendChild(label);
     article.appendChild(paragraph);
     article.appendChild(input);
-    
+    article.appendChild(input2);
+    article.appendChild(input3);
     
 /*------------------------------FORMAT OF ARRANGMENT------------------------------------- 
     `<article class="my-post">
@@ -92,6 +148,7 @@ const postUsersQuestion1 = () => {
     inputQuestion.value = "";
 }
 
+/*---Function that can post questions from anywhere on the page throught the nav menu----*/
 const postUsersQuestion2 = () => {
 
     if (postTopQuestion.value == "") {
@@ -145,6 +202,53 @@ const postUsersQuestion2 = () => {
     let id = document.createAttribute("id");
     id.value = "delete-button";
     input.setAttributeNode(id);
+
+    let title = document.createAttribute("title");
+    title.value = "delete a post";
+    input.setAttributeNode(title);
+
+    //----------------------------------------------
+
+    let input2 = document.createElement("input");
+    let type2 = document.createAttribute("type");
+    type2.value = "submit";
+    input2.setAttributeNode(type2);
+
+    let val2 = document.createAttribute("value");
+    val2.value = "EDIT";
+    input2.setAttributeNode(val2);
+
+    let _class = document.createAttribute("class");
+    _class.value = "edit";
+    input2.setAttributeNode(_class);
+
+    let id2 = document.createAttribute("id");
+    id2.value = "edit-button";
+    input2.setAttributeNode(id2);
+
+    // //------------------------------
+
+    let input3 = document.createElement("input");
+    let type3 = document.createAttribute("type");
+    type3.value = "submit";
+    input3.setAttributeNode(type3);
+
+    let val3 = document.createAttribute("value");
+    val3.value = "COMMENT";
+    input3.setAttributeNode(val3);
+
+    let _class1 = document.createAttribute("class");
+    _class1.value = "comment";
+    input3.setAttributeNode(_class1); //title="reply a post"
+
+    let id3 = document.createAttribute("id");
+    id3.value = "comment-button";
+    input3.setAttributeNode(id3);
+
+    let title1 = document.createAttribute("title");
+    title1.value = "reply a post";
+    input3.setAttributeNode(title1);
+
     /*--------------------------------------------------------------------------------------*/
     let inputPost = `${inputQuestion.value}` || `${postTopQuestion.value}`;
     let text = document.createTextNode(inputPost);
@@ -157,7 +261,8 @@ const postUsersQuestion2 = () => {
     article.appendChild(label);
     article.appendChild(paragraph);
     article.appendChild(input);
-
+    article.appendChild(input2);
+    article.appendChild(input3);
 
     /*------------------------------FORMAT OF ARRANGMENT------------------------------------- 
         `<article class="my-post">
@@ -179,3 +284,57 @@ const postUsersQuestion2 = () => {
 postTopButton.addEventListener("click", postUsersQuestion2);
 postButton.addEventListener("click", postUsersQuestion1);
 
+
+const comment = () => {
+
+
+    /*
+    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                               V.T
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
+    */
+}
+
+
+// let home = document.getElementById("home");
+// let about = document.getElementById("about");
+// let profile = document.getElementById("profile");
+
+// const activateHome = () => {
+//     home.style.borderBottom = "1px solid white";
+//     home.style.color = "white";
+//     // profile.style.backgroundColor = "#212123";
+//     // profile.style.color = "#256188";
+//     // about.style.backgroundColor = "#212123";
+//     // about.style.color = "#256188";
+// }
+
+// const activateProfile = () => {
+//     profile.style.backgroundColor = "#c8c9ca";
+//     profile.style.color = "rgb(36, 36, 36)";
+//     about.style.backgroundColor = "#343536";
+//     about.style.color = "white";
+//     home.style.backgroundColor = "#343536";
+//     home.style.color = "white";
+
+// }
+
+// const activateAbout = () => {
+//     about.style.backgroundColor = "#c8c9ca";
+//     about.style.color = "rgb(36, 36, 36)";
+//     profile.style.backgroundColor = "#343536";
+//     profile.style.color = "white";
+//     about.style.color = "white";
+//     home.style.backgroundColor = "#343536";
+//     home.style.color = "white";
+// }
+
+// home.addEventListener("click", activateHome);
+// about.addEventListener("click", activateAbout);
+// profile.addEventListener("click", activateProfile);

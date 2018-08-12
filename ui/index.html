@@ -8,6 +8,7 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="pagestyles.css" />
     <style>
+        /*------This overrides previous modular styles--------*/
         .control {
             width: 50em;
             display: inline-block;
@@ -19,10 +20,10 @@
 <body class="clearfix">
     <header class="clearfix" id="header">
         <a href="./welcome.html">
-            <img src="images/StackOverflowLite.png" alt="SOLite_logo" class="solimage" />
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" title="site-logo" class="solimage" />
         </a>
         <a href="./welcome.html">
-            <h2 class="sitename">
+            <h2 class="sitename" title="site-name">
                 <span class="bluefont">Stack</span>
                 Overflow-lite
             </h2>
@@ -30,18 +31,21 @@
         <nav class="control clearfix">
             <ul class="menu">
                 <li>
-                    <a href="./index.html">Home</a>
+                    <a href="./index.html" title="home-page" id="home">Home</a>
                 </li>
                 <li>
-                    <a href="./about.html">About</a>
+                    <a href="./about.html" title="learn-about-the-site" id="about">About</a>
                 </li>
                 <li>
-                    <a href="./profile.html">Profile</a>
+                    <a href="./profile.html" title="navigate-to-your-profile" id="profile">Profile</a>
                 </li>
                 <input type="search" placeholder="Search StackOverflow-lite" id="search" />
             </ul>
         </nav>
         <img src="images/search.png" alt="search icon" title="search icon" class="search-icon" />
+        <a href="profile.html" title="current-users-name">
+            <span class="user-welcome">Welcome, Victoria</span>
+        </a>
         <a href="profile.html">
             <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
         </a>
@@ -106,42 +110,130 @@
                         <a href="./profile.html" class="user">Chidinmma Victoria</a>
                     </label>
                     <textarea placeholder="Ask a question..." class="text-area" id="input-question"></textarea>
-                    <input type="button" value="POST" class="post-question" id="post-button" />
+                    <input type="submit" value="POST" class="post-question" id="post-button" title="post a question" />
                 </article>
+
+                <!--Display for the Post-->
                 <div id="home-feeds"></div>
+
+                <!--Question from other users-->
                 <article class="my-post">
                     <img src="images/avatar.png" id="musa" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
                     <label for="musa">
                         <a href="#">Musa Adamu</a>
                     </label>
-                    <p> Computer science inverts the normal. In normal science, you're given a world, and your job is to find
-                        out the rules. In computer science, you give the computer the rules, and it creates the world
-                        <a class="reference-link" href="https://www.brainyquote.com/quotes/alan_kay_875443?src=t_computer_science" target="_blank">(Read more)</a>
-                    </p>
+                    <p class="bold"> What is the secret behind Facebook logo design ? </p>
+                    <input type="submit" value="COMMENT" class="comment" title="reply a post" />
+                    <hr>
+                    <!--Answers from other users-->
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                I.O
+                            </a>
+                        </label>
+                        <p class="reply-text">Repetition and consistency. If you see a brand used in the same way hundreds of times, you get used
+                            to it and associate it with the company. Brands aren’t about secret hermeneutics, magic recipes,
+                            mystical ratios or hidden messages.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                M.J
+                            </a>
+                        </label>
+                        <p class="reply-text">Facebook's logo is no different. Denoted by crooked shaped alphabet 'F', Mark Zuckerberg founded
+                            social networking website is one of the most talked about brands. The small F symbol we see on
+                            Facebook's homepage is said to stand for the word Facebook or symbolization of connecting friends.</p>
+                    </div>
+                    <hr>
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                C.V
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
                 </article>
 
+
+                <!--Question from other users-->
                 <article class="my-post">
                     <img src="images/avatar.png" id="lanre" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
                     <label for="lanre">
                         <a href="#">Olanrewaju Adeboye</a>
                     </label>
-                    <p>
-                        I think the combination of graduate education in a field like Computer Science and the opportunity to apply this in a work
-                        environment like Microsoft is what drove me. The impact these opportunities create can lead to work
-                        that has broad, worldwide impact.
-                        <a class="reference-link" href=" https://www.brainyquote.com/quotes/satya_nadella_597175?src=t_computer_science" target="_blank">(Read more)</a>
-
-                    </p>
+                    <p class="bold"> What is Andela's mission and vision ? </p>
+                    <input type="submit" value="COMMENT" class="comment" title="reply a post" />
+                    <hr>
+                    <!--Answers from other users-->
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                X.Y
+                            </a>
+                        </label>
+                        <p class="reply-text">Andela mission is to advance human potential by empowering today's teams and investing in tomorrow's
+                            leaders. At Andela, we believe talent is distributed to everyone however, opportunities are not.
+                            We are building a community of talent and leaders by empowering them, giving an environment to
+                            grow and thrive, thereby advancing the overall potential of humanity. We strongly believe that
+                            if we can empower you through technology, you'd inturn empower your immediate environment.
+                            </p>
+                    </div>
+                    <hr>
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                M.J
+                            </a>
+                        </label>
+                        <p class="reply-text">
+                            <strong>X.Y</strong> has answed the question perfectly but you can know more about them by interracting with them.
+                            I suggest you apply for their bootcamp. Make good use of this golden opportunity.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                C.V
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
                 </article>
 
+
+                <!--Question from other users-->
                 <article class="my-post">
-                    <img src="images/avatar.png" id="juliet" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
-                    <label for="juliet">
-                        <a href="#">Juliet Kess-Mormoh</a>
+                    <img src="images/avatar.png" id="miriam" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="miriam">
+                        <a href="#">Miriam Kess-Mormoh</a>
                     </label>
-                    <p> I have a react application with a search form that on submit gets data from the api. I am able to search
-                        the database and get the results back to the api caller in handleSubmit which is triggered by...
+                    <p class="bold"> I know that Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser,
+                        making asynchronous testing simple and fun, BUT how do I set it up and start using it ?
                     </p>
+                    <hr>
+                    <input type="submit" value="COMMENT" class="comment" title="reply a post" />
+
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                C.V
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
                 </article>
 
             </section>
@@ -194,16 +286,16 @@
     <footer class="foot" id="footer">
         <center>
             <a href="#">
-                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" />
+                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" title="instagram icon" />
             </a>
             <a href="#">
-                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" />
+                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" title="facebook icon" />
             </a>
             <a href="#">
-                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" />
+                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" title="twitter icon" />
             </a>
             <a href="#">
-                <img src="./images/email.png" alt="email-icon" class="social-media" />
+                <img src="./images/email.png" alt="email-icon" class="social-media" title="email icon" />
             </a>
         </center>
     </footer>

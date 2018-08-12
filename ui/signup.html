@@ -9,28 +9,29 @@
     <link rel="stylesheet" type="text/css" href="pagestyles.css" />
 
     <style>
-    /*------The overwrites Previous style--------*/
+    /*------This overrides previous modular styles--------*/
     section.signin > div {
     margin: 5em auto;
 }
     section.signin h3 {
     margin: 2.5em auto 1em auto;
-    font-size: 1.8em;
+    margin-left: calc(55% - 5em);
+    font-size: 1.7em;
     color: white;
-    width: 6.5em;
+    width: 8em;
     padding: 0.5em;
     border-bottom: none;
 }
     form input[type ="email"], form input[type ="password"], form input[type = "text"] {
     width: 15em;
     outline: none;
-    margin: 1em auto;
+    margin: 1.2em auto;
 }
 
-form input[type = "button"] {
+form input[type = "submit"] {
     margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    width: 5em;
+    margin-top: 1.5em;
+    width: 12.5em;
     padding: 0.25em;
     border-radius: 0.35em;
     font-size: 1.5em;
@@ -41,10 +42,10 @@ form input[type = "button"] {
 <body class="clearfix">
     <header class="clearfix" id="header">
         <a href="./welcome.html">
-            <img src="images/StackOverflowLite.png" alt="SOLite_logo" class="solimage" />
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" title="site-logo" class="solimage" />
         </a>
         <a href="./welcome.html">
-            <h2 class="sitename">
+            <h2 class="sitename" title="site-name">
                 <span class="bluefont">Stack</span>
                 Overflow-lite
             </h2>
@@ -69,30 +70,29 @@ form input[type = "button"] {
         <section class="signin">
             <div name="Inner-wrapper">
 
-                <img src="./images/avatar.png" alt="avatar" class="avatar" />
+                <img src="./images/avatar.png" alt="avatar" class="avatar" title="profile-avatar"/>
 
-                <h3>SIGNUP FORM</h3>
+                <h3>SIGN-UP FORM</h3>
 
-                <form method="POST" action="#">
-                    <input type="text" id="fname" placeholder="First name" />
-                    <input type="text" id="lname" placeholder="Last name " />
-                    <input type="text" id="mname" placeholder="Middle name" />
-                    <input type="text" id="uname" placeholder="Username " />
-                    <input type="email" id="email" placeholder="Email" />
-                    <input type="password" id="pword" placeholder="Password" />
-                    <input type="password" id="repword" placeholder="Re-enter Password" style="margin-bottom: 0.4em"/>
+                <form method="POST" action="#" onsubmit="return false">
+                    <input type="text" id="uname" placeholder="Username required" title="please enter a username"/>
+                    <input type="text" id="fname" placeholder="First name required" title="please enter a firstname"/>
+                    <input type="text" id="lname" placeholder="Last name required" title="please enter a last name"/>
+                    <input type="email" id="email" placeholder="Email required" required/>
+                    <input type="password" id="pword" placeholder="Password required" title="please enter strong password"/>
+                    <input type="password" id="repword" placeholder="Re-enter Password required" title="please re-enter same password as above" style="margin-bottom: 0.4em" />
                     <center>
-                        <aside id="disp-error-message"></aside>
-                        <div class="red"></div>
-                        <label>WEAK</label>
-                        <div class="yellow"></div>
-                        <label>MEDIUM</label>
-                        <div class="greenYellow"></div>
-                        <label>STRONG</label>
-                        <div class="green"></div>
-                        <label>VERY STRONG</label>
+                        <aside id="disp-error-message" title="combine numbers, lowercase and uppercase alphabet and special characters to make you password strength 100%"></aside>
+                        <div class="red" title="indicates weak password with just lowercase like 'asdf' included"></div>
+                        <label title="indicates weak password with just lowercase like 'asdf' included">WEAK</label>
+                        <div class="yellow" title="indicates fairly-weak password with uppercase like 'ASDF' included"></div>
+                        <label title="indicates fairly-weak password with uppercase like 'ASDF' included">MEDIUM</label>
+                        <div class="greenYellow" title="indicates strong password with numbers like '123' included"></div>
+                        <label title="indicates strong password with numbers like '123' included">STRONG</label>
+                        <div class="green" title="indicates super-strong password with special characters like '@' or '#' included"></div>
+                        <label title="indicates super-strong password with special characters like '@' or '#' included">VERY STRONG</label>
                     </center>
-                    <input type="button" class="button" id="signup" title="click to create your profile" value="SIGNUP" />
+                    <input type="submit" class="button" id="signup" title="click to create your profile" value="SIGNUP" />
                     <br/>
                 </form> 
             </div>
@@ -101,16 +101,16 @@ form input[type = "button"] {
     <footer class="foot" id="footer">
         <center>
             <a href="#">
-                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" />
+                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" title="instagram icon"/>
             </a>
             <a href="#">
-                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" />
+                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" title="facebook icon"/>
             </a>
             <a href="#">
-                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" />
+                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" title="twitter icon"/>
             </a>
             <a href="#">
-                <img src="./images/email.png" alt="email-icon" class="social-media" />
+                <img src="./images/email.png" alt="email-icon" class="social-media" title="email icon"/>
             </a>
         </center>
     </footer>

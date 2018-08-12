@@ -106,6 +106,21 @@ header.clearfix input[type = "search"] {
     display: inline-block;
     outline: none;
 }
+header#header span.user-welcome{ /*Welcome Users @top nav */
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    top: 2.4em;
+    right: calc(22% - 2.5em);
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+header#header span.user-welcome:hover{
+    text-decoration: underline;
+    color: #47b5ffd5;
+}
 
 img.search-icon{
     position: absolute;
@@ -138,6 +153,11 @@ div.ask-question{  /*POST BUTTON*/
     line-height: 1em;
     top: 2em;
     right: calc(5% - 1.8em);
+
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-property: color;
+    transition-duration: .5s;
 }
 
 div.ask-question:hover{
@@ -187,6 +207,15 @@ input.post-top-question{
     position: absolute;
     bottom: 0.5em;
     right: calc(22% - 4em); 
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .5s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .5s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .5s;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 input.post-top-question:hover{
@@ -294,6 +323,15 @@ a.button{
     font-weight: bolder;
     cursor: pointer;
     text-align: center;
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .3s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .3s;
+    transition-property: background-color;
+    transition-duration: .3s;
 }
 
 a.button:hover{
@@ -351,18 +389,27 @@ form input[type ="email"], form input[type ="password"], form input[type = "text
     display: block;
     width: 15em;
     outline: none;
-    margin: 2em;
+    margin: 1.5em 2em 1.5em 2em;
     background-color: rgba(255, 255, 255, 0);
     font-size: 1.25em;
     color: white;
     border: none;
     border-bottom: 0.05em solid white;
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .3s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .3s;
+    transition-property: background-color;
+    transition-duration: .3s;
 }
 
-form input[type = "button"] {
+form input[type = "submit"] { /*For login button*/
     display: block;
-    margin: 0.5em auto 1em auto;
-    width: 5em;
+    margin: 1em auto 1em auto;
+    width: 13em;
     padding: 0.25em;
     border-radius: 0.35em;
     outline: none;
@@ -373,15 +420,24 @@ form input[type = "button"] {
     font-weight: bolder;
     cursor: pointer;
     text-align: center;
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .3s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .3s;
+    transition-property: background-color;
+    transition-duration: .3s;
 }
 
-form input[type = "button"]:hover{
+form input[type = "submit"]:hover{
     background-color: #93c8eb;
     color: #fff;
     border-bottom: 0.05em solid rgb(0, 0, 0);
 }
 
-form input[type = "button"]:active{
+form input[type = "submit"]:active{
     background-color: #256188;
 }
 
@@ -439,12 +495,12 @@ label{
 /*----------------INDEX-Home-Page-----------------*/
 
 section.home-page-container{
-    width: 100%;
+    width: calc(20em + 20em + 50em);
     margin: 2em auto 0 auto;
 }
 
 aside.recent-questions { /* wrapper for recently asked questions*/
-    width: 15%;
+    width: 15em;
     height: 59.5em;
     float: left;
     background-color: #ffffff7a;
@@ -470,7 +526,7 @@ aside.recent-questions > h4{
 
 .home-page-container a{ /*Links for recently asked & answered question*/
     display: block;
-    color: blue;
+    color: rgb(61, 61, 61);
     margin: 1em;
     padding-top: 0em;
     padding-bottom: 0.5em;
@@ -478,14 +534,14 @@ aside.recent-questions > h4{
 }
 
 .home-page-container a:hover{
-    color: #ffffff;
+    color: #0044ff;
 }
 
 section.home-feeds{ /*Home feeds section*/
-    width: calc(60% - 4em);
+    width: 45em;
     padding: 1em 2em 2em 2em; 
     float: left;
-    background-color: #99bff87a;
+    background-color: #99bff848;
     height: 57em;
     overflow: auto;
 }
@@ -497,7 +553,7 @@ article.my-post { /*Post article main wrapper*/
     width: 35em;
     padding: 1em 2em 3em 2em;
     margin: 1em 0 0 0;
-    background-color: rgba(255, 255, 255, 0.753);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .my-post > label > a.user{
@@ -520,7 +576,7 @@ article.my-post { /*Post article main wrapper*/
     margin: 0 auto;
 }
 
-input.post-question, input.delete-question { /*POST & DELETE Question Button rule*/
+input.post-question { /*POST & DELETE Question Button rule*/
     padding: 0.2em 0.5em 0.2em 0.5em;
     background-color: #2c6ecf;
     color: rgb(255, 255, 255);
@@ -532,17 +588,140 @@ input.post-question, input.delete-question { /*POST & DELETE Question Button rul
     outline: none;
     cursor: pointer;
     position: absolute;
-    bottom: 1em;
+    bottom: 0.8em;
     right: calc(22% - 4em); 
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .3s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .3s;
+    transition-property: background-color;
+    transition-duration: .3s;
 }
 
-input.post-question:hover, input.delete-question:hover{
+input.post-question:hover {
     background-color: #376cfd;
 }
 
-input.post-question:active, input.delete-question:active{
+input.post-question:active {
     background-color: #e6e6e6;
     color: #2675b6;
+}
+
+input.delete-question{ /* DELETE Button */
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: bold;
+    font-family: cambria;
+    border-radius: 1em;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0.8em;
+    right: calc(89% - 4em); 
+    background-color: #e40606;
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .3s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .3s;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+input.delete-question:hover{
+    background-color: #ff3939;
+}
+
+input.delete-question:active{
+    background-color: #e6e6e6;
+    color: #f50909;
+}
+
+div.comment-main-container {
+    position: relative;
+}
+.edit, .comment {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    background-color: #2c6ecf;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: bold;
+    font-family: cambria;
+    border-radius: 1em;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0.8em;
+    right: calc(79% - 4em);  
+
+    -moz-transition-property: background-color;
+    -moz-transition-duration: .3s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: .3s;
+    -o-transition-property: background-color;
+    -o-transition-duration: .3s;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+.bold{
+    font-weight: bolder;
+    text-align: center;
+}
+.comment {
+    right: calc(23% - 4em);  
+}
+
+.edit:hover, .comment:hover{
+    background-color: #5380fd;
+}
+
+.edit:active, .comment:active{
+    background-color: #e6e6e6;
+    color: #2675b6;
+}
+
+.reply-avatar{
+    width: 2em;
+    height: 2em;
+    top: 1em;
+    left: 1em;
+    position: absolute;
+}
+
+a.reply-name{
+    display: inline-block;
+    text-align: left;
+    border: none;
+    top: 3.7em;
+    left: calc(10% - 3.5em);
+    position: absolute;
+}
+
+.reply-text{
+    color: #212123;
+    display: inline-block;
+    resize: none;
+    width: 31em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    outline: none;
+    height: 3em;
+    padding: 1em;
+    line-height: 1.3em;
+    font-family: cursive;
+    font-size: 0.8em;
+    outline: none;
+    text-align: left;
+    margin: 0.5em 0 0.5em 0;
+    margin-left: calc(30% - 6em);
 }
 
 img.other-users-avatar, img.main-users-avatar{
@@ -565,19 +744,19 @@ article.my-post label a{
     margin-top: 0;
 }
 
-article.my-post label a:hover{
+article.my-post label a:hover {
     text-decoration: underline;
     color: #1b96e7;
 }
 
-aside.recent-answers{
-    width: 15%;
+aside.recent-answers{ /* RECENTLY anwered questions */
+    width: 15em;
     height: 59.5em;
     border-radius: 0 0.5em 0.5em 0;
     float: left;
     padding-top: 0.5em;
     margin-right: 5%;
-    background-color: #ffffff7a;
+    background-color: #ffffff73;
     text-align: left;
 }
 
@@ -592,6 +771,61 @@ aside.recent-answers > h4 {
     color: rgb(34, 33, 33);
     font-family: cursive; 
     padding: 0.3em;
+}
+
+/*--------------PROFILE PAGE--------------*/
+
+#profile-container{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-page-avatar{
+    position: absolute;
+    top: 3em;
+    left: calc(17% - 5em);
+    width: 10em;
+    height: 10em;
+}
+
+#profile-container h1 {
+    position: absolute;
+    color: #9da0a1;
+    text-shadow: 0.05em 0.05em #212123;
+    font-size: 3em;
+    top: 2em;
+    left: calc(58% - 5em);
+    padding-bottom: 0.1em;
+    border-top: 1px solid rgb(172, 165, 156);
+    border-bottom: 1px solid rgb(172, 165, 156);
+}
+
+div.number-of-ques-ans {
+    position: absolute;
+    text-shadow: 0.05em 0.05em #bcbcc0;
+    top: 11em;
+    left: calc(38% - 5em);
+    text-align: left;
+}
+
+div.number-of-ques-ans h2{
+    display: inline-block;
+}
+
+.list-of-questions-asked{
+    text-align: left;
+    font-size: 1.1em;
+    padding: 1em;
+    border: none;
+}
+
+header.tab{
+   margin: 15em auto 0 auto; 
+}
+
+header.tab > a{
+ border: none;
+ display: inline-block;
 }
 
 /*-------------Footer---------------*/
@@ -645,11 +879,11 @@ img.social-media:hover{
     }
 }
 
-a.reference-link{
+/* a.reference-link{
     display: inline;
     color: blue;
     margin: 0;
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-}
+} */

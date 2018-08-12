@@ -11,15 +11,16 @@ const signup = document.getElementById("signup");
 //----SignUp form input validation-----
 const signupValidation = () => {
     disp.style.color = "rgb(255, 45, 45)";
+    disp.style.fontFamily = "cursive";
     
-    if (fname.value === ""){
+    if (uname.value === ""){
+        disp.innerHTML = "Please enter a username";
+        return false;
+    } else if (fname.value === "") {
         disp.innerHTML = "Please enter a firstname";
         return false;
     } else if (lname.value === "") {
         disp.innerHTML = "Please enter a lastname";
-        return false;
-    } else if (uname.value === "") {
-        disp.innerHTML = "Please enter a username";
         return false;
     } else if (email.value === "") {
         disp.innerHTML = "Please enter a valid email";

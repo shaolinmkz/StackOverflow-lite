@@ -5,11 +5,18 @@ const signin = document.getElementById("signin");
 
 //----SignIn form input validation-----
 const signinValidation = () => {
+    siDisp.style.fontFamily = "cursive";
     if (siEmail.value === "") {
-        siDisp.innerHTML = "Invalid Username";
+        siDisp.innerHTML = "Invalid Email";
         return false;
     } else if (siPword.value === "") {
         siDisp.innerHTML = "Invalid Password";
+        return false;
+    } else if ((siPword.value).length < 6) {
+        siDisp.innerHTML = "Minimum length is 6 characters";
+        return false;
+    } else if ((siPword.value).length > 20) {
+        siDisp.innerHTML = "Maximum length is 20 characters";
         return false;
     } else {
         return window.location.assign("./index.html");

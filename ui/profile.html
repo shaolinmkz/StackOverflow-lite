@@ -5,9 +5,10 @@
     <link rel="icon" href="images/favicon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
-    <title>Home</title>
+    <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="pagestyles.css" />
     <style>
+        /*------This overrides previous modular styles--------*/
         .control {
             width: 50em;
             display: inline-block;
@@ -19,10 +20,10 @@
 <body class="clearfix">
     <header class="clearfix" id="header">
         <a href="./welcome.html">
-            <img src="images/StackOverflowLite.png" alt="SOLite_logo" class="solimage" />
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" title="site-logo" class="solimage" />
         </a>
         <a href="./welcome.html">
-            <h2 class="sitename">
+            <h2 class="sitename" title="site-name">
                 <span class="bluefont">Stack</span>
                 Overflow-lite
             </h2>
@@ -30,24 +31,29 @@
         <nav class="control clearfix">
             <ul class="menu">
                 <li>
-                    <a href="./index.html">Home</a>
+                    <a href="./index.html" title="home-page" id="home">Home</a>
                 </li>
                 <li>
-                    <a href="./about.html">About</a>
+                    <a href="./about.html" title="learn-about-the-site" id="about">About</a>
                 </li>
                 <li>
-                    <a href="./profile.html">Profile</a>
+                    <a href="./profile.html" title="navigate-to-your-profile" id="profile">Profile</a>
                 </li>
                 <input type="search" placeholder="Search StackOverflow-lite" id="search" />
             </ul>
         </nav>
         <img src="images/search.png" alt="search icon" title="search icon" class="search-icon" />
-        <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
-        <div title="ask question" class="ask-question"> POST A QUESTION
+        <a href="profile.html">
+            <span class="user-welcome">Welcome, Victoria</span>
+        </a>
+        <a href="profile.html">
+            <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
+        </a>
+        <div title="Ask a question" class="ask-question"> ASK A QUESTION
 
             <article class="my-top-post">
-                <textarea placeholder="Ask a question..." class="text-area"></textarea>
-                <input type="button" value="POST" class="post-top-question" />
+                <textarea placeholder="Ask a question..." class="text-area" id="post-top-question"></textarea>
+                <input type="button" value="POST" class="post-top-question" id="post-top-button" />
             </article>
         </div>
     </header>
@@ -97,70 +103,86 @@
                 </ul>
             </aside>
 
-            <section class="home-feeds" id="home-feeds">
-                <article class="my-post">
-                    <img src="images/avatar.png" id="user" alt="profile-avatar" title="main-users-avatar" class="other-users-avatar" />
-                    <label for="user">
-                        <a href="#" class="user">Chidinmma Victoria</a>
-                    </label>
-                    <textarea placeholder="Ask a question..." class="text-area"></textarea>
-                    <input type="button" value="POST" class="post-question" />
-                </article>
+            <section class="home-feeds" id="profile-container">
+                <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-page-avatar"/>
+                <h1>Chidinmma Victoria</h1>
 
-                <article class="my-post">
-                    <img src="images/avatar.png" id="musa" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
-                    <label for="musa">
-                        <a href="#">Musa Adamu</a>
-                    </label>
-                    <p> Computer science inverts the normal. In normal science, you're given a world, and your job is to find
-                        out the rules. In computer science, you give the computer the rules, and it creates the world
-                        <a class="reference-link" href="https://www.brainyquote.com/quotes/alan_kay_875443?src=t_computer_science" target="_blank">(Read more)</a>
-                    </p>
-                </article>
+                <div class="number-of-ques-ans">
+                    <h2>Number of questions asked :</h2> <span><h2>5</h2></span> <br>
+                    <h2>Number of answers given :</h2> <span><h2>12</h2></span> <br>
+                </div>
+                <header class="tab">  
+                    <a  href="./list-of-question.html" target="list-frame">QUESTIONS ASKED</a> |
+                    <a href="./list-of-answers.html" target="list-frame">QUESTION ANSWERED</a>
+                
+                </header>
 
-                <article class="my-post">
-                    <img src="images/avatar.png" id="lanre" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
-                    <label for="lanre">
-                        <a href="#">Olanrewaju Adeboye</a>
-                    </label>
-                    <p>
-                        I think the combination of graduate education in a field like Computer Science and the opportunity to apply this in a work
-                        environment like Microsoft is what drove me. The impact these opportunities create can lead to work
-                        that has broad, worldwide impact.
-                        <a class="reference-link" href=" https://www.brainyquote.com/quotes/satya_nadella_597175?src=t_computer_science" target="_blank">(Read more)</a>
-
-                    </p>
-                </article>
-
-                <article class="my-post">
-                    <img src="images/avatar.png" id="juliet" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
-                    <label for="juliet">
-                        <a href="#">Juliet Kess-Mormoh</a>
-                    </label>
-                    <p> I have a react application with a search form that on submit gets data from the api. I am able to search
-                        the database and get the results back to the api caller in handleSubmit which is triggered by...
-                    </p>
-                </article>
-
+                <iframe class="list-of-questions-asked" name="list-frame" width="90%" height="50%"></iframe>
             </section>
+            
 
-            <footer class="foot" id="footer">
-                <center>
-                    <a href="#">
-                        <img src="./images/instagram.png" alt="instagram-icon" class="social-media" />
-                    </a>
-                    <a href="#">
-                        <img src="./images/facebook.png" alt="facebook-icon" class="social-media" />
-                    </a>
-                    <a href="#">
-                        <img src="./images/twitter.png" alt="twitter-icon" class="social-media" />
-                    </a>
-                    <a href="#">
-                        <img src="./images/email.png" alt="email-icon" class="social-media" />
-                    </a>
-                </center>
-            </footer>
-            <!-- <script type="text/javascript" src="script.js"></script> -->
+            <aside class="recent-answers">
+                <h3>Answer feeds</h3>
+                <h4>Recent answers to questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">SQL simply means Structured... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can break out of a nested for loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows BSOD can be caused by different factors... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Javascript is not just a scri... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I had that same issue too with npm install express... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Mongoose has some connection with Mongo... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Server simply means... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can leave out of a while loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows Update can be caused BSOD... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Java is not Javascript... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Have you tried using "sudo" super user... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I used a software called SMADAV to solve that or use your CLI to... (more)</a>
+                    </li>
+                </ul>
+            </aside>
+        </center>
+    </section>
+
+    <footer class="foot" id="footer">
+        <center>
+            <a href="#">
+                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" title="instagram icon" />
+            </a>
+            <a href="#">
+                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" title="facebook icon" />
+            </a>
+            <a href="#">
+                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" title="twitter icon" />
+            </a>
+            <a href="#">
+                <img src="./images/email.png" alt="email-icon" class="social-media" title="email icon" />
+            </a>
+        </center>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
