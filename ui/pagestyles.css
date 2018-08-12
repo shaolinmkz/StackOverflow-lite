@@ -696,6 +696,28 @@ div.comment-main-container {
     position: absolute;
 }
 
+.upvote{
+    width: 1em;
+    height: 1em;
+    top: 1.5em;
+    left: calc(15% - 1em);
+    position: absolute;
+    cursor: pointer;
+}
+
+.downvote{
+    width: 1em;
+    height: 1em;
+    top: 3em;
+    left: calc(15% - 1em);
+    position: absolute;
+    cursor: pointer;
+}
+
+.upvote:hover, .downvote:hover{
+    background-color: #4a4a4d36;
+}
+
 a.reply-name{
     display: inline-block;
     text-align: left;
@@ -828,7 +850,33 @@ header.tab > a{
  display: inline-block;
 }
 
-/*-------------Footer---------------*/
+/*------------ABOUT page------------*/
+div.about{
+    background-color: #2560881e;
+    padding: 1.5em;
+    border-radius: 0.5em;
+}
+
+div.about h1{
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0.05em 0.05em rgb(255, 255, 255);
+}
+
+div.about p{
+    text-align: justify;
+    padding: 1em;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 0.05em 0.05em black;
+}
+
+section#about-container{
+    background-color: rgba(255, 255, 255, 0.582);
+}
+
+/*-------------Site's Footer---------------*/
 
 footer.foot{
     /* background-color: #2c2c30; */
