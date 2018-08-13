@@ -89,11 +89,6 @@ ul.menu {
     /* border-bottom: 0.1em solid rgb(26, 25, 25); */
 }
 
-.menu li > a:active {
-    background-color: #c8c9ca;
-    color: rgb(36, 36, 36);
-}
-
 header.clearfix input[type = "search"] {
     width: 15em;
     padding: 0.2em;

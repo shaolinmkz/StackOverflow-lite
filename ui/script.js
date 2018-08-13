@@ -264,7 +264,7 @@ const postUsersQuestion2 = () => {
     article.appendChild(input2);
     article.appendChild(input3);
 
-    /*------------------------------FORMAT OF ARRANGMENT------------------------------------- 
+    /*----------------------------------------------FORMAT OF ARRANGMENT------------------------------------------------- 
         `<article class="my-post">
             <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
             <label>
@@ -275,9 +275,9 @@ const postUsersQuestion2 = () => {
             </p>
             <input type="button" value="Delete" class="delete-question" id="delete-button"/>
         </article>`
-    -----------------------------------------------------------------------------------------*/
+    -------------------------------------------------------------------------------------------------------------------*/
 
-    homeFeeds.insertBefore(article, homeFeeds.firstChild);
+    homeFeeds.insertBefore(article, homeFeeds.firstChild); //Insert the post/article inside the div but before the div's first child
     postTopQuestion.value = "";
 }
 
@@ -285,10 +285,56 @@ postTopButton.addEventListener("click", postUsersQuestion2);
 postButton.addEventListener("click", postUsersQuestion1);
 
 
+
+
 const comment = () => {
+    let div = document.createElement("div");
+    let _class = document.createAttribute("class");
+    _class.value = "comment-main-container";
+    div.setAttributeNode(_class);
 
+    let img = document.createElement("img");
+    let src = document.createAttribute("src");
+    src.value = "images/avatar.png";
+    img.setAttributeNode(src);
 
-    /*
+    let _class1 = document.createAttribute("class");
+    _class1.value = "reply-avatar";
+    img.setAttributeNode(_class1);
+
+    let label = document.createElement("label");
+
+    let anchor = document.createElement("a");
+    let link = document.createAttribute("href");
+    link.value = "#";
+    anchor.setAttributeNode(link);
+
+    let _class2 = document.createAttribute("class");
+    _class2.value = "reply-name";
+    anchor.setAttributeNode(_class2);
+
+    let text = document.createTextNode("V.T");
+    anchor.appendChild(text);   //appended V.T to anchor
+    label.appendChild(anchor); //appended anchor to label
+
+    let textArea = document.createElement("textarea");
+    let placeHolder = document.createAttribute("placeholder");
+    placeHolder.value = "Write a comment...";
+
+    let _class3 = document.createAttribute("class");
+    _class3.value = "reply-text";
+    textArea.setAttributeNode(_class3);
+
+    div.appendChild(img);
+    div.appendChild(label);
+    div.appendChild(textArea);
+
+    let backdoor = document.getElementById("bdoor");
+    backdoor.innerHTML = div;
+
+    
+
+    /*----------------------------------------------------FORMAT OF ARRANGMENT----------------------------------------------------------------
     <div class="comment-main-container">
                         <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
                         <label>
@@ -298,6 +344,6 @@ const comment = () => {
                         </label>
                         <textarea placeholder="Write a comment..." class="reply-text"></textarea>
                     </div>
-    */
+    --------------------------------------------------------------------------------------------------------------------------------------*/
 }
 
