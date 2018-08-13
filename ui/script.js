@@ -6,8 +6,17 @@ let postButton = document.getElementById("post-button");
 let postTopQuestion = document.getElementById("post-top-question");
 let postTopButton = document.getElementById("post-top-button");
 let deleteButton = document.getElementById("delete-button");
-
 /*--------------------------------------------------------------------------------------*/
+
+//-------------LOGSOUT USER--------------------
+let logout = document.getElementById("logout");
+
+logout.onclick = () => {
+    let check = confirm("ARE YOU SURE?");
+    if (check) {
+        window.location.assign("./index.html");
+    }
+}
 
 /*----Function that can post questions from the home page---*/
 const postUsersQuestion1 = () => {
@@ -409,4 +418,3 @@ const postUsersQuestion2 = () => {
 
 postTopButton.addEventListener("click", postUsersQuestion2); //event listeners for top post button
 postButton.addEventListener("click", postUsersQuestion1);   //event listeners for buttom post button
-

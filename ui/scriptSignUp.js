@@ -38,7 +38,7 @@ const signupValidation = () => {
         disp.innerHTML = "Passwords didn't match";
         return false;
     } else {
-        return window.location.assign("./index.html");
+        return window.location.assign("./home.html");
     }
 };
 

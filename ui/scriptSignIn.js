@@ -19,7 +19,7 @@ const signinValidation = () => {
         siDisp.innerHTML = "Maximum length is 20 characters";
         return false;
     } else {
-        return window.location.assign("./index.html");
+        return window.location.assign("./home.html");
     }
 }
 

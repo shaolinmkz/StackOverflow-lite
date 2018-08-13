@@ -112,7 +112,18 @@ header#header span.user-welcome{ /*Welcome Users @top nav */
     transition-duration: .5s;
 }
 
-header#header span.user-welcome:hover{
+header#header span.user-logout{ /*Welcome Users @top nav */
+    position: absolute;
+    font-size: 1em;
+    color: white;
+    top: 3.5em;
+    right: calc(27% - 2.5em);
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+header#header span.user-welcome:hover, header#header span.user-logout:hover{
     text-decoration: underline;
     color: #47b5ffd5;
 }
