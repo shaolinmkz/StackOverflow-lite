@@ -33,4 +33,15 @@ export default {
             question: result[0],
         });
     },
+
+    postQuestion(req, res) {
+        let post = req.body;
+
+        if (!post.id) {
+            return res.sendStatus(500);
+        } else {
+            questions.push(post);
+        }
+        return res.sendStatus(204);
+    },
 }
