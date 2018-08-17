@@ -1,4 +1,4 @@
-import { questions } from "../dataStructureDB.js";
+import { questions } from "../dataStructureDB";
 
 export default {
     getAllQuestions(req, res) {

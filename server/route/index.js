@@ -1,3 +1,3 @@
-import get_all_questionsRoute from "./get_all_questionsRoute.js";
+import questionsRoute from "./questionsRoute";
 
-export { get_all_questionsRoute };
+export { questionsRoute };
