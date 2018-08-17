@@ -23,7 +23,6 @@ export default {
 
         if (result.length < 1) {
             return res.status(404).send({
-                status: "Error",
                 message: "Question is not available yet"
             });
         }
