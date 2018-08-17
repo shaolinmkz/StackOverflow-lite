@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser"; //middleware that reads requests
 import logger from "morgan";
+import { get_all_questionsRoute } from "./server/route";
 
 //Assigning express framework to a variable to make portable
 const app = express();
@@ -12,6 +13,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/json" }));
 
+app.use(get_all_questionsRoute);
+
 app.get("/api", (req, res) => {
     return res.status(200).send({
         message: "connected successfully",
@@ -22,4 +25,8 @@ app.all("*", (req, res) => {
     return res.status(404).send({
         message: "Oops! 404. Page not found",
     })
-})
+});
+
+app.listen(8000, () => {
+    console.log("Listening on port 8000");
+});
