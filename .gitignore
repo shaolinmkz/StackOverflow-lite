@@ -1,1 +1,9 @@
+#ignore the module directory
 /node_modules
+
+#ignore the eslintrc for now
+.eslintrc.js
+
+#ignore the package files
+package.json
+package-lock.json 

@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser"; //middleware that reads requests
 import logger from "morgan";
-import { questionsRoute } from "./server/route";
+import { questionsRoute, answersRoute } from "./server/route";
 
 //Assigning express framework to a variable to make portable
 const app = express();
@@ -14,6 +14,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/json" }));
 
 app.use(questionsRoute);
+app.use(answersRoute);
 
 app.listen(8000, () => {
     console.log("Listening on port 8000");
