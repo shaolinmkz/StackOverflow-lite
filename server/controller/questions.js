@@ -35,7 +35,7 @@ export default {
     },
 
     postQuestion(req, res) {
-        let post = req.body;
+        const post = req.body;
 
         if (!post.id) {
             return res.sendStatus(500);
