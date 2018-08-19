@@ -5,5 +5,4 @@
 .eslintrc.js
 
 #ignore the package files
-package.json
 package-lock.json 
