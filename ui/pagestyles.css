@@ -8,7 +8,7 @@
 
 /*-------General Settings-----*/
 
-body{
+body {
     max-width: 100%;
     min-width: 480px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -16,7 +16,7 @@ body{
     background-image: url("./images/banner.png");
 }
 
-div.wrapper{
+div.wrapper {
     width: 90.625em;
     margin: 0 auto;
 }
@@ -516,14 +516,18 @@ aside.recent-questions { /* wrapper for recently asked questions*/
     border-radius: .5em 0 0 .5em;
 }
 
-aside.recent-questions > h3 {
+aside.recent-questions-down {
+    display: none;
+}
+
+aside.recent-questions > h3, aside.recent-questions-down > h3 {
     text-align: center;
     color: white;
     text-shadow: 0.1em 0.1em 0.1em black
 
 }
 
-aside.recent-questions > h4{
+aside.recent-questions > h4, aside.recent-questions-down > h4{
     text-align: center;
     color: rgb(34, 33, 33);
     font-family: cursive; 
@@ -885,10 +889,7 @@ section#about-container{
 /*-------------Site's Footer---------------*/
 
 footer.foot{
-    /* background-color: #2c2c30; */
-    margin: 0 auto;
     width: 90em;
-    display: block;
 }
 
 img.social-media{
@@ -896,6 +897,11 @@ img.social-media{
     height: 2em;
     display: inline-block;
     margin: 1em 0.1em;
+}
+
+aside.socialmedia{
+    width: 10em;
+    margin: 0 50%;
 }
 
 img.social-media:hover{
@@ -915,29 +921,294 @@ img.social-media:hover{
 
 /*------------MEDIA QUERIES------------*/
 
-@media only screen and (max-width: 1599px) {
-    #header {
-        width: 90.625em;
+@media (max-width: 768px) {
+
+    body.clearfix > header {
+        width: 100%;
+        display: block;
     }
-    #footer {
-        width: 90.625em;
+
+    div.wrapper {
+        width: 100%;
     }
+
+    section.reg, section.signin {
+        float: none;
+        width: 100%;
+    }
+
+    img.solimage{
+        margin-left: 6.2em;
+    }
+
+    h2.sitename {
+    left: calc(39% - 1.7em);
+
+    }
+
+    footer.foot {
+        width: 100%;
+    }
+
+    aside.socialmedia{
+    width: 9.5em;
+    margin: 0 auto;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 340px) {
-    section.signin{
-        width: 40em;
+    h1.heading{
+    font-size: 1.7em;
+    text-align: center;
     }
-    section.reg{
-        width: 40em;
+
+        section.reg > aside {
+        text-align: justify;
+        width: 25em;
+        height: 30em;
+        padding: 1em;
+        margin: 10em auto;
     }
+
+    /*Top nav ask question hidden*/
+    div.ask-question{
+        display: none;
+    }
+    /*Search icon hidden*/
+    img.search-icon{
+        display: none;
+    }
+
+    /*Search field hidden*/
+    #search {
+        display: none;
+    }
+
+    ul.menu {
+        margin: 0 0.5em;
+        float: none;
+        margin: 0 auto;
+    }
+
+    #nav {
+        width: 17em;
+        border: 1px solid black;
+        float: none;
+        display: inline-block;
+        margin: 0 auto 0 4em;
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    img.profile-avatar{
+        display: none;
+    }
+
+    header#header span.user-welcome{
+        display: none;
+    }
+
+    header#header span.user-logout{ /*Welcome Users @top nav */
+    top: 5.4em;
+    left: calc(90% - 2.5em);
+    }
+
+    section.home-page-container{
+        width: 100%;
+        margin: 2em auto 0 auto;
+    }
+
+    aside.recent-questions { /* wrapper for recently asked questions*/
+        display: none;
+    }
+
+    aside.recent-questions-down{ 
+        display: block;
+        width: 45%;
+        height: 59.5em;
+        float: left;
+        background-color: #ffffff96;
+        margin-left: 5%;
+        text-align: left;
+        padding-top: 0.5em;
+        border-radius: .5em 0 0 .5em;
+    }
+
+    aside.recent-answers{ /* RECENTLY anwered questions */
+    width: 45%;
+    height: 59.5em;
+    border-radius: 0 0.5em 0.5em 0;
+    float: left;
+    padding-top: 0.5em;
+    margin-right: 5%;
+    background-color: #ffffff96;
+    text-align: left;
 }
 
-/* a.reference-link{
-    display: inline;
-    color: blue;
-    margin: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-} */
+/*________________________________________________________________________*/
+
+section.home-feeds{ /*Home feeds section*/
+    width: 87%;
+    padding: 2% 2% 2% 2%; 
+    float: none;
+    height: 57em;
+    margin-bottom: 5%; 
+    background-color: #99bff800;
+}
+
+article.my-post { /*Post article main wrapper*/
+    position: relative;
+    text-align: justify;
+    border-radius: 1em;
+    width: 25em;
+    /* padding: 1em 2em 3em 2em; */
+    padding: 1em 0.01em 3em 0.01em;
+    margin: 1em 0 0 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.my-post > label > a.user{
+    border: none;
+    margin-bottom: 0;
+}
+
+.my-post .text-area {
+    border-radius: 0.5em;
+    border: none;
+    width: 20em;
+    height: 3em;
+    padding: 1em;
+    resize: none;
+    line-height: 1.3em;
+    font-family: cursive;
+    font-size: 1em;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+}
+
+input.post-question { /*POST & DELETE Question Button rule*/
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    background-color: #2c6ecf;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: cambria;
+    border-radius: 1em;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0.8em;
+    right: calc(22% - 4em); 
+}
+
+input.post-question:hover {
+    background-color: #376cfd;
+}
+
+input.post-question:active {
+    background-color: #e6e6e6;
+    color: #2675b6;
+}
+
+input.delete-question{ /* DELETE Button */
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: cambria;
+    border-radius: 1em;
+    bottom: 1em;
+    right: calc(83% - 4em); 
+    background-color: #e90808d8;
+}
+
+.edit, .comment {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    background-color: #2c6ecf;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    bottom: 1em;
+    right: calc(70% - 4em);  
+}
+
+.comment {
+    right: calc(23% - 4em);  
+}
+
+.reply-avatar{
+    width: 2em;
+    height: 2em;
+    top: 1em;
+    left: 1em;
+    position: absolute;
+}
+
+.upvote{
+    top: 1.5em;
+    left: calc(20% - 1em);
+}
+
+.downvote{
+    top: 3em;
+    left: calc(20% - 1em);
+}
+
+
+a.reply-name{
+    top: 3.7em;
+    left: calc(14% - 3.5em);
+}
+
+.reply-text{
+    width: 20em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    outline: none;
+    height: 2em;
+    padding: 0.5em;
+    line-height: 1.3em;
+    font-size: 0.8em;
+    outline: none;
+    text-align: left;
+    margin: 1em 0 0.5em 0;
+    margin-left: calc(40% - 6em);
+}
+
+img.other-users-avatar, img.main-users-avatar{
+    width:  2em;
+    height: 2em;
+}
+
+/*------profile------*/
+.profile-page-avatar{
+    top: 2em;
+    left: calc(19% - 5em);
+    width: 6em;
+    height: 6em;
+}
+
+#profile-container h1 {
+    font-size: 2em;
+    top: 2em;
+    left: calc(58% - 5em);
+    padding-bottom: 0.1em;
+}
+
+div.number-of-ques-ans {
+    top: 10.2em;
+    font-size: 0.65em;
+    left: calc(38% - 5em);
+    text-align: left;
+}
+
+header.tab{
+   margin: 12em auto 0 auto; 
+   font-size: 0.7em;
+}
+
+.hide{
+    display: none;
+}
+}

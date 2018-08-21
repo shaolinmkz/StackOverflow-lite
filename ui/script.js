@@ -55,6 +55,9 @@ const postUsersQuestion1 = () => {
     anchor.appendChild(text2);
 /*--------------------------------------------------------------------------------------*/
     let paragraph = document.createElement("p"); //No attribute
+    let classy = document.createAttribute("class");
+    classy.value = "bold";
+    paragraph.setAttributeNode(classy);
 /*--------------------------------------------------------------------------------------*/
     let input = document.createElement("input");
     let type = document.createAttribute("type");
