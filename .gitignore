@@ -2,7 +2,7 @@
 /node_modules
 
 #ignore the eslintrc for now
-.eslintrc.js
+.eslintrc.json
 
-#ignore the package files
+#ignore the package lock json files
 package-lock.json 

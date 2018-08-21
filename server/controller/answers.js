@@ -7,6 +7,6 @@ export default {
         const arrayPosition = id - 1;
 
             questions[arrayPosition].answers.push(answer);
-            return res.status(200).send('SENT!');
+            return res.status(200).send("sent");
     },
 }
