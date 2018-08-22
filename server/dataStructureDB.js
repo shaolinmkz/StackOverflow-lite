@@ -5,6 +5,7 @@ export const questions = [
             question: "What does the acronym SQL stand for?",
             answers: [ 
                 {
+                    id: 1,
                 username: "Paul",
                 answer: "SQL stands for Structured Query Language."
                 },
@@ -16,6 +17,7 @@ export const questions = [
             question: "How can I create a mock database with data-structures",
             answers: [
                 {
+                      id: 1,
                 username: "Cynthia",
                 answer: "You can create a mock-up database by using a json server."
                 },
@@ -27,6 +29,7 @@ export const questions = [
             question: "How can I make my web page responsive?",
             answers: [
                 {
+                    id: 1,
                 username: "Miriam",
                 answer: "You can make a responsive website by using media queries."
                 },
@@ -38,6 +41,7 @@ export const questions = [
             question: "Is Java and Javascript same?",
             answers: [
                 {
+                    id: 1,
                 username: "John",
                 answer: "Javascript and Java are two different programming languages."
                 },

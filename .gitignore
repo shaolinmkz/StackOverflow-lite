@@ -6,3 +6,6 @@
 
 #ignore the package lock json files
 package-lock.json 
+
+#ignore the babel files
+.babelrc
