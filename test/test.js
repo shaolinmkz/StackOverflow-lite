@@ -4,8 +4,6 @@ import supertest from "supertest";
 const { expect } = require("chai"); 
 
 const request = supertest.agent(app);
-const questions = [];
-
 
 //Test for get all questions
 describe("GET all questions api", () => {
@@ -20,18 +18,6 @@ describe("GET all questions api", () => {
             done();
         });
     });
-    
-    // it("should return status 404 if no question exists in the dataStructure", (done) => {
-    //     request
-    //         .get(questions)
-    //         .get("/api/v1/questions")
-    //         .end((err, res) => {
-    //             expect(res.status).to.eql(404);
-    //             expect(res.body.message).to.eql("No questions are available");
-    //             if (err) { return done(err); }
-    //             done();
-    //         });
-    // });
 
     it("should return all questions in JSON format", (done) => {
         request.get("/api/v1/questions")
@@ -98,17 +84,34 @@ describe("POST a questions api", () => {
 
 
 
-// //Test for post an answer
-// describe("POST an answer api", () => {
-//     it("should return status 200", (done) => {
-//         request.get("/api/v1/questions/:id/answers")
-//             .expect(200)
-//             .end(done);
-//     });
+//Test for post an answer
+describe("POST a questions api", () => {
 
-//     it("should return status sent", (done) => {
-//         request.get("/api/v1/questions/:id/answers")
-//             .expect("sent")
-//             .end(done);
-//     });
-// });
+    it("should return 404 if question is not found", (done) => {
+        request.post("/api/v1/questions/100/answers")
+            .send({
+                id: 2,
+                answer: "Locate the nearest Andelan..."
+            })
+            .end((err, res) => {
+                expect(res.status).to.eql(404);
+                expect(res.body.message).to.eql("Question is not available");
+                if (err) { return done(err); }
+                done();
+            });
+    });
+
+    it("should return 201 if answer post is successful", (done) => {
+        request.post("/api/v1/questions/3/answers")
+            .send({
+                id: 2,
+                answer: "Locate the nearest Andelan..."
+            })
+            .end((err, res) => {
+                expect(res.status).to.eql(201);
+                expect(res.body.message).to.eql("Answer posted successfully");
+                if (err) { return done(err); }
+                done();
+            });
+    });
+});

@@ -7,6 +7,7 @@ export default {
                  message: "No questions are available" 
                 });
         }
+
             return res.status(200).send({
                 message: "All questions delivered successfully",
                 questions,
@@ -35,14 +36,7 @@ export default {
         const { question, username } = req.body;
         const id = (questions.length + 1);
 
-        if (!question) {
-            return res.status(400).send({
-                status: "Error",
-                message: "Question field is required"
-            });
-        }
-
-        const questionContainer = {
+        const questionContainer = { //created new object
             id,
             username,
             question,

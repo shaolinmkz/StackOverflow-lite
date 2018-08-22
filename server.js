@@ -1,5 +1,5 @@
 import express from "express";
-import bodyParser from "body-parser"; //middleware that reads requests
+import bodyParser from "body-parser"; //middleware that reads requests as res.body
 import logger from "morgan";
 import { questionsRoute, answersRoute } from "./server/route";
 
@@ -17,7 +17,7 @@ app.use(questionsRoute);
 app.use(answersRoute);
 
 app.get("/", function (req, res) {
-    res.send("Welcome to StackOverflow-lite");
+    res.send("Welcome to StackOverflow-lite, Andela's Cycle 35 Bootcamp Project");
 });
 
 app.listen(8000, () => {

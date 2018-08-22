@@ -5,7 +5,12 @@ export default {
         const { answer, username } = req.body;
         const id = parseInt(req.params.id, 10);
 
-        const question = questions.filter((question) => { return question.id === id; });
+        const question = questions.filter((question) => { 
+            return question.id === id; 
+        });
+
+        const filteredQuestion = question[0];
+
         if (question.length < 1) {
             return res.status(404).send({
                 status: "Error",
@@ -13,18 +18,19 @@ export default {
             });
         }
 
-        const answerId  = question[0].answers.length + 1;
+        const answerId = filteredQuestion.answers.length + 1; 
+        
         const answerContainer = {
             id: answerId,
             answer,
             username,
         }
-        question[0].answers.push(answerContainer);
+        filteredQuestion.answers.push(answerContainer);
 
         return res.status(201).send({
             status: "Success",
             message: "Answer posted successfully",
-            data: question[0].answers,
+            data: filteredQuestion.answers,
         });
     },
 }
