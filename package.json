@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "start:dev": "nodemon --watch server --exec babel-node server.js",
-    "start:test": "mocha --reporter=min --no-colors --require babel-core/register --require babel-polyfill index.js"
+    "start:test": "mocha --reporter=min --no-colors --require babel-core/register --require babel-polyfill index.js",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha server/test",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
