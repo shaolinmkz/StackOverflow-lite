@@ -1,7 +1,7 @@
 import { questions } from "../dataStructureDB";
 
-export default {
-    getAllQuestions (req, res) {
+export default class Questions{
+    static getAllQuestions (req, res) {
         if (questions.length < 1) {
              return res.status(404).send({ 
                  message: "No questions are available" 
@@ -12,9 +12,9 @@ export default {
                 message: "All questions delivered successfully",
                 questions,
             });
-    },
+    }
 
-    getQuestion(req, res) {
+    static getQuestion(req, res) {
         const id = parseInt(req.params.id, 10);
 
         const result = questions.filter((question) => question.id === id);
@@ -30,9 +30,9 @@ export default {
             message: "Question received successfully",
             question: result[0],
         });
-    },
+    }
 
-    postQuestion(req, res) {
+    static postQuestion(req, res) {
         const { question, username } = req.body;
         const id = (questions.length + 1);
 
@@ -49,5 +49,5 @@ export default {
             message: "Question has been posted successfully",
             question: questionContainer
         });
-    },
+    }
 }
