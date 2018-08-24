@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
-    "start:dev": "nodemon --watch server --exec babel-node server.js",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha server/test",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "start:dev": "nodemon --watch server --exec babel-node server.js"
   },
   "repository": {
     "type": "git",
