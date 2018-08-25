@@ -16,20 +16,21 @@ export const questionExists = (req, res, next) => {
 export const emptyQuestionField = (req, res, next) => {
     const { question } = req.body;
 
-    if (typeof question === "string") { 
-        return next();
-    } else if (typeof question !== "string") {
-        return res.status(400).send({
-            status: "Error",
-            message: "Invalid input"
-        }); 
-    }
     if (!question) {
         return res.status(400).send({
             status: "Error",
             message: "Question field is required"
         });
-    }   
+    }
+
+        if (typeof question === "string") {
+            return next();
+        }  
+
+        return res.status(400).json({
+        status: "Error",
+        message: "Invalid input"
+        });     
 }
 
 export const emptyAnswerField = (req, res, next) => {
