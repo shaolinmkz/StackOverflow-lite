@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register",
     "start:dev": "nodemon --watch server --exec babel-node server.js",
-    "start:test": "mocha --reporter=min --no-colors --require babel-core/register --require babel-polyfill index.js"
+    "start:build": "nodemon --exec babel node -- server.js"
   },
   "repository": {
     "type": "git",

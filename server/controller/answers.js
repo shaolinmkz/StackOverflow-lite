@@ -1,7 +1,7 @@
 import { questions } from "../dataStructureDB";
 
-export default {
-    postAnswer(req, res) {
+export default class Answers{
+    static postAnswer(req, res) {
         const { answer, username } = req.body;
         const id = parseInt(req.params.id, 10);
 
@@ -32,5 +32,5 @@ export default {
             message: "Answer posted successfully",
             data: filteredQuestion.answers,
         });
-    },
+    }
 }
