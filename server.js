@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser"; //middleware that reads requests as res.body
 import logger from "morgan";
-import { questionsRoute, answersRoute } from "./server/route";
+import { questionsRoute, answersRoute, signupRoute, loginRoute } from "./server/route";
 
 //Creating a new instance of express
 const app = express();
@@ -15,6 +15,8 @@ app.use(bodyParser.json({ type: "application/json" }));
 
 app.use(questionsRoute);
 app.use(answersRoute);
+app.use(signupRoute);
+app.use(loginRoute);
 
 app.get("/", function (req, res) {
     res.send("Welcome to StackOverflow-lite, Andela's Cycle 35 Bootcamp Project");

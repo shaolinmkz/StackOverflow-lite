@@ -1,4 +1,5 @@
-export default class Users {
+export default class signupUsers {
+
     static createUser(req, res) {
         const { username,
                 firstName,
@@ -6,7 +7,6 @@ export default class Users {
                 email,
                 password,
                 reEnterPassword } = req.body;
-
-        // validation in middle where
+  
     }
 }
