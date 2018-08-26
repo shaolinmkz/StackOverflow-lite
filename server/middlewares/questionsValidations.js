@@ -14,8 +14,7 @@ export const questionExists = (req, res, next) => {
 }
 
 export const emptyQuestionField = (req, res, next) => {
-    const { question, /*username*/ } = req.body;
-    // const id = (questions.length + 1);
+    const { question } = req.body;
 
     if (!question) {
         return res.status(400).send({
@@ -24,17 +23,30 @@ export const emptyQuestionField = (req, res, next) => {
         });
     }
 
-    return next();
+        if (typeof question === "string") {
+            return next();
+        }  
+
+        return res.status(400).json({
+        status: "Error",
+        message: "Invalid input"
+        });     
 }
 
 export const emptyAnswerField = (req, res, next) => {
-
-    if (req.body.answer === undefined) { // Add ||req.body.username === undefined in the feature if necessary
+    const { answer } = req.body;
+    if (answer === undefined) { // Add ||req.body.username === undefined in the feature if necessary
         return res.status(400).send({
             status: "Error",
-            message: "Answer field is required" //add username required in the feature
-        });
+            message: "Answer field is required" //add username if required in the feature
+		});
+    }
+    if (typeof answer === "string") {
+        return next();
     }
 
-    return next();
+    return res.status(400).send({
+        status: "Error",
+        message: "Invalid input"
+    }); 
 }
