@@ -9,3 +9,6 @@ package-lock.json
 
 #ignore the babel files
 .babelrc
+
+#ignore helper file
+helper.js
