@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="pagestyles.css" />
+    <style>
+        /*------This overrides previous modular styles--------*/
+
+        .control {
+            width: 50em;
+            display: inline-block;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body class="clearfix">
+    <header class="clearfix" id="header">
+        <a href="./home.html">
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" title="site-logo" class="solimage" />
+        </a>
+        <a href="./home.html">
+            <h2 class="sitename" title="site-name">
+                <span class="bluefont">Stack</span>
+                Overflow-lite
+            </h2>
+        </a>
+        <nav class="control clearfix">
+            <ul class="menu" id="nav">
+                <li>
+                    <a href="./home.html" title="home-page" id="home">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html" class="current" title="learn-about-the-site" id="about">About</a>
+                </li>
+                <li>
+                    <a href="./profile.html" title="navigate-to-your-profile" id="profile">Profile</a>
+                </li>
+                <input type="search" placeholder="Search StackOverflow-lite" id="search" />
+            </ul>
+        </nav>
+        <img src="images/search.png" alt="search icon" title="search icon" class="search-icon" />
+        <a href="profile.html" title="current-users-name">
+            <span class="user-welcome">Welcome, Victoria</span>
+        </a>
+        <span id="logout" class="user-logout">Logout</span>
+        <a href="profile.html">
+            <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
+        </a>
+    
+        <div title="Ask a question" class="ask-question"> ASK A QUESTION
+
+            <article class="my-top-post">
+                <textarea placeholder="Ask a question..." class="text-area" id="post-top-question"></textarea>
+                <input type="button" value="POST" class="post-top-question" id="post-top-button" />
+            </article>
+        </div>
+    </header>
+
+    <section class="home-page-container clearfix">
+        <center>
+            <aside class="recent-questions hide">
+                <h3>Question feeds</h3>
+                <h4>Recently asked questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">What is the full of the acronym SQL?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I fix a windows BSOD?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is Javascript an object oriented language like C++?</a>
+                    </li>
+                    <li>
+                        <a href="#">My express dependency isn't installing, How can I fix it?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is it the meaning of mongoose?</a>
+                    </li>
+                    <li>
+                        <a href="#">Can Javascript be used outside the web browser?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">What are Andelans values?</a>
+                    </li>
+                    <li>
+                        <a href="#">Where can I download AngularJS for free?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I create a chatbox like facebook's own?</a>
+                    </li>
+                    <li>
+                        <a href="#">My files on my pen drivenkeep coverting to shortcuts?</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="home-feeds" id="about-container" >
+                <div class="about">
+                    <h1>ABOUT</h1>
+                    <p>Stack Overflow-lite is a platform where you can ask questions and also provide answers to other peoples questions.
+                    </p>
+
+                    <p>We work collaboratively here to breakdown big problems into small problems and decipher them fast for you.
+                        Your Questions will be seen by millions of great minds, thus given you high probability of getting a sponteneous
+                        answer right to your question.</p>
+
+                    <p>Our algorithms are unique and will protect you from frudulent individuals on the net. Explore Stack Overflow-lite
+                        and make sure you follow us on our social media page (the links are found on the site's footer).</p>
+                       
+                    <p>Start stacking your overflowed thoughts now!, use the post feature at the top right corner of your screen.</p>
+                </div>
+            </section>
+
+            <aside class="recent-answers hide">
+                <h3>Answer feeds</h3>
+                <h4>Recent answers to questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">SQL simply means Structured... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can break out of a nested for loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows BSOD can be caused by different factors... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Javascript is not just a scri... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I had that same issue too with npm install express... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Mongoose has some connection with Mongo... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Server simply means... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can leave out of a while loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows Update can be caused BSOD... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Java is not Javascript... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Have you tried using "sudo" super user... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I used a software called SMADAV to solve that or use your CLI to... (more)</a>
+                    </li>
+                </ul>
+            </aside>
+        </center>
+    </section>
+
+    <footer class="foot" id="footer">
+        <center>
+            <a href="#">
+                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" title="instagram icon" />
+            </a>
+            <a href="#">
+                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" title="facebook icon" />
+            </a>
+            <a href="#">
+                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" title="twitter icon" />
+            </a>
+            <a href="#">
+                <img src="./images/email.png" alt="email-icon" class="social-media" title="email icon" />
+            </a>
+        </center>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

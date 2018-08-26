@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="pagestyles.css" />
+    <style>
+        /*------This overrides previous modular styles--------*/
+        .control {
+            width: 50em;
+            display: inline-block;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body class="clearfix">
+    <header class="clearfix" id="header">
+        <a href="./home.html">
+            <img src="images/StackOverflowLite.png" alt="SOLite_logo" title="site-logo" class="solimage" />
+        </a>
+        <a href="./home.html">
+            <h2 class="sitename" title="site-name">
+                <span class="bluefont">Stack</span>
+                Overflow-lite
+            </h2>
+        </a>
+        <nav class="control clearfix">
+            <ul class="menu" id="nav">
+                <li>
+                    <a href="./home.html" class="current" title="home-page" id="home">Home</a>
+                </li>
+                <li>
+                    <a href="./about.html" title="learn-about-the-site" id="about">About</a>
+                </li>
+                <li>
+                    <a href="./profile.html" title="navigate-to-your-profile" id="profile">Profile</a>
+                </li>
+                <input type="search" placeholder="Search StackOverflow-lite" id="search" />
+            </ul>
+        </nav>
+        <img src="images/search.png" alt="search icon" title="search icon" class="search-icon" />
+        <a href="profile.html" title="current-users-name">
+            <span class="user-welcome">Welcome, Victoria</span>
+        </a>
+        <span id="logout" class="user-logout">Logout</span>
+        <a href="profile.html">
+            <img src="images/avatar.png" alt="profile-avatar" title="profile-avatar" class="profile-avatar" />
+        </a>
+        <div title="Ask a question" class="ask-question"> ASK A QUESTION
+
+            <article class="my-top-post">
+                <textarea placeholder="Ask a question..." class="text-area" id="post-top-question"></textarea>
+                <input type="button" value="POST" class="post-top-question" id="post-top-button" />
+            </article>
+        </div>
+    </header>
+
+    <section class="home-page-container clearfix">
+        <center>
+            <aside class="recent-questions">
+                <h3>Question feeds</h3>
+                <h4>Recently asked questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">What is the full of the acronym SQL?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I fix a windows BSOD?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is Javascript an object oriented language like C++?</a>
+                    </li>
+                    <li>
+                        <a href="#">My express dependency isn't installing, How can I fix it?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is it the meaning of mongoose?</a>
+                    </li>
+                    <li>
+                        <a href="#">Can Javascript be used outside the web browser?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">What are Andelans values?</a>
+                    </li>
+                    <li>
+                        <a href="#">Where can I download AngularJS for free?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I create a chatbox like facebook's own?</a>
+                    </li>
+                    <li>
+                        <a href="#">My files on my pen drivenkeep coverting to shortcuts?</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class="home-feeds">
+                <article class="my-post" id="my-post">
+                    <img src="images/avatar.png" id="user" alt="profile-avatar" title="main-users-avatar" class="other-users-avatar" />
+                    <label for="user">
+                        <a href="./profile.html" class="user">Chidinmma Victoria</a>
+                    </label>
+                    <textarea placeholder="Ask a question..." class="text-area" id="input-question"></textarea>
+                    <input type="submit" value="POST" class="post-question" id="post-button" title="post a question" />
+                </article>
+
+                <!--Display for the Post-->
+                <div id="home-feeds"></div>
+
+                <!--Question from other users-->
+                <article class="my-post">
+                    <img src="images/avatar.png" id="musa" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="musa">
+                        <a href="#">Musa Adamu</a>
+                    </label>
+                    <p class="bold"> What is the secret behind Facebook logo design ? </p>
+                    <input type="submit" value="COMMENT" class="comment" title="reply a post" />
+                    <hr>
+                    <!--Answers from other users-->
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <img src="images/upvote.png" alt="upvote-answer" title="upvote-answer" class="upvote" />
+                        <img src="images/downvote.png" alt="downvote-answer" title="downvote-answer" class="downvote" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                I.O
+                            </a>
+                        </label>
+                        <p class="reply-text">Repetition and consistency. If you see a brand used in the same way hundreds of times, you get used
+                            to it and associate it with the company. Brands aren’t about secret hermeneutics, magic recipes,
+                            mystical ratios or hidden messages.
+                        </p>
+                    </div>
+                    <hr> <!--Next Anwser-->
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <img src="images/upvote.png" alt="upvote-answer" title="upvote-answer" class="upvote" />
+                        <img src="images/downvote.png" alt="downvote-answer" title="downvote-answer" class="downvote" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                M.J
+                            </a>
+                        </label>
+                        <p class="reply-text">Facebook's logo is no different. Denoted by crooked shaped alphabet 'F', Mark Zuckerberg founded
+                            social networking website is one of the most talked about brands. The small F symbol we see on
+                            Facebook's homepage is said to stand for the word Facebook or symbolization of connecting friends.</p>
+                    </div>
+                    <hr>
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                C.V
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
+                </article>
+
+
+                <!--Question from other users-->
+                <article class="my-post">
+                    <img src="images/avatar.png" id="lanre" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="lanre">
+                        <a href="#">Olanrewaju Adeboye</a>
+                    </label>
+                    <p class="bold"> What is Andela's mission and vision ? </p>
+                    <input type="submit" value="COMMENT" class="comment" title="reply a post" />
+                    <hr>
+                    <!--Answers from other users-->
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <img src="images/upvote.png" alt="upvote-answer" title="upvote-answer" class="upvote" />
+                        <img src="images/downvote.png" alt="downvote-answer" title="downvote-answer" class="downvote" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                X.Y
+                            </a>
+                        </label>
+                        <p class="reply-text">Andela mission is to advance human potential by empowering today's teams and investing in tomorrow's
+                            leaders. At Andela, we believe talent is distributed to everyone however, opportunities are not.
+                            We are building a community of talent and leaders by empowering them, giving an environment to
+                            grow and thrive, thereby advancing the overall potential of humanity. We strongly believe that
+                            if we can empower you through technology, you'd inturn empower your immediate environment.
+                            </p>
+                    </div>
+                    <hr> <!--Next Answer-->
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <img src="images/upvote.png" alt="upvote-answer" title="upvote-answer" class="upvote" />
+                        <img src="images/downvote.png" alt="downvote-answer" title="downvote-answer" class="downvote" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                M.J
+                            </a>
+                        </label>
+                        <p class="reply-text">
+                            <strong>X.Y</strong> has answed the question perfectly but you can know more about them by interracting with them.
+                            I suggest you apply for their bootcamp. Make good use of this golden opportunity.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                C.V
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
+                </article>
+
+
+                <!--Question from other users-->
+                <article class="my-post">
+                    <img src="images/avatar.png" id="miriam" alt="profile-avatar" title="other-users-avatar" class="other-users-avatar" />
+                    <label for="miriam">
+                        <a href="#">Miriam Kess-Mormoh</a>
+                    </label>
+                    <p class="bold"> I know that Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser,
+                        making asynchronous testing simple and fun, BUT how do I set it up and start using it ? It seems confusing, using 
+                        code to test code to make sure it fails first...
+                    </p>
+                    <hr>
+                    <input type="submit" value="COMMENT" class="comment" title="reply a post" />
+
+                    <div class="comment-main-container">
+                        <img src="images/avatar.png" alt="profile-avatar" title="other-users-avatar" class="reply-avatar" />
+                        <label>
+                            <a href="#" class="reply-name">
+                                C.V
+                            </a>
+                        </label>
+                        <textarea placeholder="Write a comment..." class="reply-text"></textarea>
+                    </div>
+                </article>
+
+            </section>
+
+            <aside class="recent-questions-down">
+                <h3>Question feeds</h3>
+                <h4>Recently asked questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">What is the full of the acronym SQL?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I fix a windows BSOD?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is Javascript an object oriented language like C++?</a>
+                    </li>
+                    <li>
+                        <a href="#">My express dependency isn't installing, How can I fix it?</a>
+                    </li>
+                    <li>
+                        <a href="#">Is it the meaning of mongoose?</a>
+                    </li>
+                    <li>
+                        <a href="#">Can Javascript be used outside the web browser?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I break out of a nested for loop?</a>
+                    </li>
+                    <li>
+                        <a href="#">What are Andelans values?</a>
+                    </li>
+                    <li>
+                        <a href="#">Where can I download AngularJS for free?</a>
+                    </li>
+                    <li>
+                        <a href="#">How can I create a chatbox like facebook's own?</a>
+                    </li>
+                    <li>
+                        <a href="#">My files on my pen drivenkeep coverting to shortcuts?</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <aside class="recent-answers">
+                <h3>Answer feeds</h3>
+                <h4>Recent answers to questions</h4>
+                <ul>
+                    <li>
+                        <a href="#">SQL simply means Structured... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can break out of a nested for loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows BSOD can be caused by different factors... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Javascript is not just a scri... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I had that same issue too with npm install express... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Mongoose has some connection with Mongo... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Server simply means... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">You can leave out of a while loop by... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Windows Update can be caused BSOD... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Java is not Javascript... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">Have you tried using "sudo" super user... (more)</a>
+                    </li>
+                    <li>
+                        <a href="#">I used a software called SMADAV to solve that or use your CLI to... (more)</a>
+                    </li>
+                </ul>
+            </aside>
+        </center>
+    </section>
+
+    <footer class="foot" id="footer">
+        <aside class="socialmedia">
+            <a href="#">
+                <img src="./images/instagram.png" alt="instagram-icon" class="social-media" title="instagram icon" />
+            </a>
+            <a href="#">
+                <img src="./images/facebook.png" alt="facebook-icon" class="social-media" title="facebook icon" />
+            </a>
+            <a href="#">
+                <img src="./images/twitter.png" alt="twitter-icon" class="social-media" title="twitter icon" />
+            </a>
+            <a href="#">
+                <img src="./images/email.png" alt="email-icon" class="social-media" title="email icon" />
+            </a>
+        </aside>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
