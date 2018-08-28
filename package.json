@@ -2,9 +2,9 @@
   "name": "stackoverflow-lite",
   "version": "1.0.0",
   "description": "StackOverflow-lite is a platform where people can ask questions and provide answers.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": " nyc mocha --compilers js:babel-core/register --exit  --exit",
+    "test": "mocha --compilers js:babel-core/register",
     "start:dev": "nodemon --watch server --exec babel-node server.js",
     "start:build": "nodemon --exec babel node -- server.js"
   },
@@ -19,14 +19,20 @@
   },
   "homepage": "https://github.com/shaolinmkz/StackOverflow-lite#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "chai": "^4.1.2",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
+    "express-generator": "^4.16.0",
     "json-server": "^0.14.0",
+    "jsonwebtoken": "^8.3.0",
     "mocha": "^5.2.0",
     "node-uuid": "^1.4.8",
     "nodemon": "^1.18.3",
-    "nyc": "^11.9.0"
+    "pg": "^7.4.3",
+    "pg-promise": "^8.4.6"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
