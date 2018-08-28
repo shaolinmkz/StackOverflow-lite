@@ -1,25 +1,25 @@
-import { db } from "../db";
+import { db } from "../db/queries";
 
 export default class SignupUsers {
 
-	static createUser(req, res) {
+	static createUser(req, res, next) {
 		const { username,
-			firstName,
-			lastName,
-			email,
-            password,
-            reEnterPassword } = req.body;
+				firstName,
+				lastName,
+				email,
+         	    passwd,
+         	    reEnterPasswd } = req.body;
             
-        if (reEnterPassword !== password ) {
+        if (reEnterPasswd !== passwd ) {
             return res.status(409).json({
                 message: "password didn't match"
             });
         }
 
 
-		db.none(`INSERT INTO Users(username, firstName, lastName, email, password)
-            values(${username}, ${firstName}, ${lastName}, ${email}, ${password})`,
-		req.body)
+		db.none("INSERT INTO Users(username, firstName, lastName, email, password)" + 
+		"VALUES(${username}, ${firstName}, ${lastName}, ${email}, ${password})",
+			req.body)
 			.then(() => {
 				res.status(201)
 					.json({
@@ -28,7 +28,7 @@ export default class SignupUsers {
 					});
 			})
 			.catch((err) => {
-				return err;
+				return next(err);
 			});
 	}
 }
