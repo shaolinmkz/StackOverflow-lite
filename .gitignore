@@ -1,14 +1,5 @@
 #ignore the module directory
 /node_modules
 
-#ignore the eslintrc for now
-.eslintrc.json
-
-#ignore the package lock json files
-package-lock.json 
-
-#ignore the babel files
-.babelrc
-
-#ignore helper file
-helper.js
+# ignore .nyc_output directory
+/.nyc_output
