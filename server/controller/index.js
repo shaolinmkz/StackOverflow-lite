@@ -1,6 +1,5 @@
 import Questions from "./questions";
 import Answers from "./answers";
-import SignupUsers from "./signupUsers";
-//import loginUsers from "./loginUsers";
+import { createNewUsers, loginUsers } from "./users";
 
-export { Questions, Answers, SignupUsers, /*loginUsers*/ };
+export { Questions, Answers, createNewUsers, loginUsers };
