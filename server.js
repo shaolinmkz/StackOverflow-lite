@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
     res.send("Welcome to StackOverflow-lite, Andela's Cycle 35 Bootcamp Project");
 });
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log("Listening on port 8000");
 });
 
